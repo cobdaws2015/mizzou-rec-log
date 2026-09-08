@@ -1,0 +1,46 @@
+name: collect
+
+on:
+  schedule:
+    # Offset off the top of the hour on purpose: GitHub's own docs warn that
+    # scheduled runs get delayed or dropped at :00 when Actions is busy.
+    - cron: "3-59/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Two runs pushing to the same branch would race. Queue instead of cancelling,
+# because a cancelled run is a lost sample.
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sample the Rec
+        id: sample
+        run: python3 collect.py
+
+      - name: Rebuild summary
+        if: steps.sample.outputs.changed == 'true'
+        run: python3 summarize.py
+
+      - name: Commit
+        if: steps.sample.outputs.changed == 'true'
+        run: |
+          git config user.name "rec-log bot"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --quiet --cached && exit 0
+          git commit -m "data: $(date -u '+%Y-%m-%dT%H:%MZ')"
+          # Another queued run may have landed between checkout and push.
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase --autostash || true
+          done
+          exit 1

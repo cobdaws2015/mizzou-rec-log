@@ -1,0 +1,3 @@
+published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pct,is_closed,collected_at
+2026-07-20T12:07:36.65,0,12,7,10164,Dive Well,Aquatics,0,20,0.0,True,2026-09-08T22:35:11+00:00
+2026-07-23T14:32:40.623,3,14,32,10165,Tiger Grotto,Aquatics,2,50,4.0,True,2026-09-08T22:35:11+00:00
