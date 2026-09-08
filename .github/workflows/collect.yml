@@ -2,9 +2,10 @@ name: collect
 
 on:
   schedule:
-    # Offset off the top of the hour on purpose: GitHub's own docs warn that
-    # scheduled runs get delayed or dropped at :00 when Actions is busy.
-    - cron: "3-59/10 * * * *"
+    # Explicit minutes rather than a "3-59/10" range-step, so there is no
+    # question about how the expression parses. Still off the top of the hour:
+    # GitHub's own docs warn that runs get delayed or dropped at :00.
+    - cron: "5,15,25,35,45,55 * * * *"
   workflow_dispatch:
 
 permissions:
