@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- MizzouRec occupancy sample, every 10 minutes.
+       Backstop for .github/workflows/collect.yml, which has never fired on its
+       own schedule. See run-local.sh for the full note.
+
+       Install:
+         cp com.mizzourec.collect.plist ~/Library/LaunchAgents/
+         launchctl bootstrap gui/$UID ~/Library/LaunchAgents/com.mizzourec.collect.plist
+
+       Run it right now without waiting:
+         launchctl kickstart -p gui/$UID/com.mizzourec.collect
+
+       Remove:
+         launchctl bootout gui/$UID/com.mizzourec.collect
+
+       StartInterval does not fire while the Mac is asleep and does not backfill
+       missed intervals; launchd runs the job once on wake. Gaps overnight and
+       whenever the lid is shut are expected, not a fault. -->
+  <key>Label</key>
+  <string>com.mizzourec.collect</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/cobymaybrook/Claude Projects/mizzou-rec-log/run-local.sh</string>
+  </array>
+
+  <key>StartInterval</key>
+  <integer>600</integer>
+
+  <!-- Unlike the cobybuilds refresh, firing on load is fine here: this job only
+       appends public gym counts to its own repo. An extra sample costs nothing
+       and collect.py drops it as a duplicate if the Rec has not recounted. -->
+  <key>RunAtLoad</key>
+  <true/>
+
+  <!-- run-local.sh keeps its own log; these catch anything that dies before it. -->
+  <key>StandardOutPath</key>
+  <string>/Users/cobymaybrook/Library/Logs/mizzou-rec-collect.launchd.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/cobymaybrook/Library/Logs/mizzou-rec-collect.launchd.log</string>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/cobymaybrook/Claude Projects/mizzou-rec-log</string>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>
