@@ -26,3 +26,4 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-09-08T20:23:01.643,1,20,23,9727,Functional Fitness,Facility Operations,3,10,30.0,False,2026-09-09T01:26:16+00:00
 2026-09-08T20:23:02.63,1,20,23,9731,Outdoor Fitness,Facility Operations,8,45,17.8,False,2026-09-09T01:26:16+00:00
 2026-09-08T21:39:12.043,1,21,39,10163,50m Pool,Aquatics,24,45,53.3,False,2026-09-09T02:54:09+00:00
+2026-09-09T06:55:19.147,2,6,55,10163,50m Pool,Aquatics,0,45,0.0,True,2026-09-09T11:59:46+00:00
