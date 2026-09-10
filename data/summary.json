@@ -7,7 +7,7 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-10T21:52:10+00:00",
+ "generated_at": "2026-09-10T23:02:42+00:00",
  "last_day": "2026-09-10",
  "locations": {
   "50m Pool": {
@@ -52,6 +52,11 @@
       "count": 4,
       "n": 1,
       "pct": 25
+     },
+     "17": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      },
      "7": {
       "count": 2,
@@ -213,6 +218,13 @@
   "Climbing Wall": {
    "capacity": 8,
    "grid": {
+    "Thu": {
+     "17": {
+      "count": 4,
+      "n": 1,
+      "pct": 50
+     }
+    },
     "Tue": {
      "16": {
       "count": 0,
@@ -254,6 +266,11 @@
       "pct": 0
      },
      "14": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
+     "17": {
       "count": 0,
       "n": 1,
       "pct": 0
@@ -455,6 +472,13 @@
   "North Courts": {
    "capacity": 40,
    "grid": {
+    "Thu": {
+     "17": {
+      "count": 35,
+      "n": 1,
+      "pct": 88
+     }
+    },
     "Tue": {
      "16": {
       "count": 9,
@@ -523,6 +547,13 @@
   "South Courts": {
    "capacity": 40,
    "grid": {
+    "Thu": {
+     "17": {
+      "count": 2,
+      "n": 1,
+      "pct": 5
+     }
+    },
     "Tue": {
      "16": {
       "count": 0,
@@ -654,6 +685,11 @@
       "n": 1,
       "pct": 51
      },
+     "17": {
+      "count": 21,
+      "n": 1,
+      "pct": 38
+     },
      "7": {
       "count": 16,
       "n": 1,
@@ -707,5 +743,5 @@
    }
   }
  },
- "samples": 117
+ "samples": 123
 }
