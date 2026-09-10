@@ -91,3 +91,6 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-09-09T18:07:45.47,2,18,7,9728,Boxing Gym,Facility Operations,3,16,18.8,False,2026-09-09T23:12:51+00:00
 2026-09-09T18:07:46.38,2,18,7,9727,Functional Fitness,Facility Operations,0,10,0.0,False,2026-09-09T23:12:51+00:00
 2026-09-09T18:07:47.283,2,18,7,9731,Outdoor Fitness,Facility Operations,0,45,0.0,True,2026-09-09T23:12:51+00:00
+2026-09-10T07:05:47.893,3,7,5,9717,Weight Room,Facility Operations,16,55,29.1,False,2026-09-10T12:12:54+00:00
+2026-09-10T07:05:49.283,3,7,5,9728,Boxing Gym,Facility Operations,2,16,12.5,False,2026-09-10T12:12:54+00:00
+2026-09-10T07:05:50.707,3,7,5,9727,Functional Fitness,Facility Operations,3,10,30.0,False,2026-09-10T12:12:54+00:00

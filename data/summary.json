@@ -1,5 +1,5 @@
 {
- "days_observed": 3,
+ "days_observed": 4,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -7,8 +7,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-09T23:12:51+00:00",
- "last_day": "2026-09-09",
+ "generated_at": "2026-09-10T12:12:54+00:00",
+ "last_day": "2026-09-10",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -37,6 +37,13 @@
   "Boxing Gym": {
    "capacity": 16,
    "grid": {
+    "Thu": {
+     "7": {
+      "count": 2,
+      "n": 1,
+      "pct": 12
+     }
+    },
     "Tue": {
      "16": {
       "count": 1,
@@ -198,6 +205,13 @@
   "Functional Fitness": {
    "capacity": 10,
    "grid": {
+    "Thu": {
+     "7": {
+      "count": 3,
+      "n": 1,
+      "pct": 30
+     }
+    },
     "Tue": {
      "16": {
       "count": 2,
@@ -506,6 +520,13 @@
   "Weight Room": {
    "capacity": 55,
    "grid": {
+    "Thu": {
+     "7": {
+      "count": 16,
+      "n": 1,
+      "pct": 29
+     }
+    },
     "Tue": {
      "16": {
       "count": 35,
@@ -553,5 +574,5 @@
    }
   }
  },
- "samples": 85
+ "samples": 88
 }
