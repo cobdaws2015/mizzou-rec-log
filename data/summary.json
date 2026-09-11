@@ -1,5 +1,5 @@
 {
- "days_observed": 4,
+ "days_observed": 5,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -7,8 +7,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-10T23:02:42+00:00",
- "last_day": "2026-09-10",
+ "generated_at": "2026-09-11T13:32:58+00:00",
+ "last_day": "2026-09-11",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -37,6 +37,13 @@
   "Boxing Gym": {
    "capacity": 16,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     }
+    },
     "Thu": {
      "10": {
       "count": 4,
@@ -147,6 +154,13 @@
   "Cardio Gallery": {
    "capacity": 89,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 5,
+      "n": 1,
+      "pct": 6
+     }
+    },
     "Thu": {
      "11": {
       "count": 13,
@@ -218,6 +232,13 @@
   "Climbing Wall": {
    "capacity": 8,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     }
+    },
     "Thu": {
      "17": {
       "count": 4,
@@ -254,6 +275,13 @@
   "Functional Fitness": {
    "capacity": 10,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     }
+    },
     "Thu": {
      "10": {
       "count": 3,
@@ -330,6 +358,13 @@
   "Indoor Track": {
    "capacity": 50,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     }
+    },
     "Thu": {
      "11": {
       "count": 20,
@@ -401,6 +436,13 @@
   "Jungle Annex": {
    "capacity": 36,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 5,
+      "n": 1,
+      "pct": 14
+     }
+    },
     "Thu": {
      "11": {
       "count": 15,
@@ -472,6 +514,13 @@
   "North Courts": {
    "capacity": 40,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     }
+    },
     "Thu": {
      "17": {
       "count": 35,
@@ -547,6 +596,13 @@
   "South Courts": {
    "capacity": 40,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     }
+    },
     "Thu": {
      "17": {
       "count": 2,
@@ -598,6 +654,13 @@
   "Strength Training": {
    "capacity": 90,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 6,
+      "n": 1,
+      "pct": 7
+     }
+    },
     "Thu": {
      "11": {
       "count": 43,
@@ -669,6 +732,13 @@
   "Weight Room": {
    "capacity": 55,
    "grid": {
+    "Fri": {
+     "5": {
+      "count": 5,
+      "n": 1,
+      "pct": 9
+     }
+    },
     "Thu": {
      "10": {
       "count": 20,
@@ -743,5 +813,5 @@
    }
   }
  },
- "samples": 123
+ "samples": 133
 }
