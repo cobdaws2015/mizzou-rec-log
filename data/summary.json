@@ -7,7 +7,7 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-11T13:32:58+00:00",
+ "generated_at": "2026-09-11T17:22:12+00:00",
  "last_day": "2026-09-11",
  "locations": {
   "50m Pool": {
@@ -38,6 +38,11 @@
    "capacity": 16,
    "grid": {
     "Fri": {
+     "12": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
      "5": {
       "count": 0,
       "n": 1,
@@ -120,6 +125,13 @@
   "Brewer Courts": {
    "capacity": 50,
    "grid": {
+    "Fri": {
+     "12": {
+      "count": 4,
+      "n": 1,
+      "pct": 8
+     }
+    },
     "Tue": {
      "20": {
       "count": 35,
@@ -233,6 +245,11 @@
    "capacity": 8,
    "grid": {
     "Fri": {
+     "12": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
      "5": {
       "count": 0,
       "n": 1,
@@ -276,6 +293,11 @@
    "capacity": 10,
    "grid": {
     "Fri": {
+     "12": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
      "5": {
       "count": 0,
       "n": 1,
@@ -515,6 +537,11 @@
    "capacity": 40,
    "grid": {
     "Fri": {
+     "12": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
      "5": {
       "count": 0,
       "n": 1,
@@ -597,6 +624,11 @@
    "capacity": 40,
    "grid": {
     "Fri": {
+     "12": {
+      "count": 2,
+      "n": 1,
+      "pct": 5
+     },
      "5": {
       "count": 0,
       "n": 1,
@@ -733,6 +765,11 @@
    "capacity": 55,
    "grid": {
     "Fri": {
+     "12": {
+      "count": 16,
+      "n": 1,
+      "pct": 29
+     },
      "5": {
       "count": 5,
       "n": 1,
@@ -813,5 +850,5 @@
    }
   }
  },
- "samples": 133
+ "samples": 140
 }
