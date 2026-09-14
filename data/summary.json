@@ -7,7 +7,7 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-13T18:48:02+00:00",
+ "generated_at": "2026-09-14T01:18:30+00:00",
  "last_day": "2026-09-13",
  "locations": {
   "50m Pool": {
@@ -18,6 +18,13 @@
       "count": 2,
       "n": 1,
       "pct": 4
+     }
+    },
+    "Sun": {
+     "20": {
+      "count": 7,
+      "n": 1,
+      "pct": 16
      }
     },
     "Tue": {
@@ -1216,5 +1223,5 @@
    }
   }
  },
- "samples": 215
+ "samples": 216
 }
