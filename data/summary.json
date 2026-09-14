@@ -1,5 +1,5 @@
 {
- "days_observed": 7,
+ "days_observed": 8,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -7,8 +7,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-14T01:18:30+00:00",
- "last_day": "2026-09-13",
+ "generated_at": "2026-09-14T11:37:03+00:00",
+ "last_day": "2026-09-14",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -251,6 +251,13 @@
       "count": 5,
       "n": 1,
       "pct": 6
+     }
+    },
+    "Mon": {
+     "6": {
+      "count": 7,
+      "n": 1,
+      "pct": 8
      }
     },
     "Sat": {
@@ -564,6 +571,13 @@
       "pct": 0
      }
     },
+    "Mon": {
+     "6": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     }
+    },
     "Sat": {
      "15": {
       "count": 14,
@@ -679,6 +693,13 @@
       "count": 5,
       "n": 1,
       "pct": 14
+     }
+    },
+    "Mon": {
+     "6": {
+      "count": 10,
+      "n": 1,
+      "pct": 28
      }
     },
     "Sat": {
@@ -1013,6 +1034,13 @@
       "pct": 7
      }
     },
+    "Mon": {
+     "6": {
+      "count": 10,
+      "n": 1,
+      "pct": 11
+     }
+    },
     "Sat": {
      "15": {
       "count": 35,
@@ -1223,5 +1251,5 @@
    }
   }
  },
- "samples": 216
+ "samples": 220
 }
