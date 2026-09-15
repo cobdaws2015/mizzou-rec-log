@@ -322,3 +322,7 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-09-14T18:16:55.59,0,18,16,9727,Functional Fitness,Facility Operations,2,10,20.0,False,2026-09-15T00:29:33+00:00
 2026-09-14T18:16:56.34,0,18,16,9731,Outdoor Fitness,Facility Operations,11,45,24.4,False,2026-09-15T00:29:33+00:00
 2026-09-14T20:23:43.223,0,20,23,10163,50m Pool,Aquatics,3,45,6.7,False,2026-09-15T01:52:58+00:00
+2026-09-15T07:51:29.1,1,7,51,9712,Cardio Gallery,Facility Operations,19,89,21.3,False,2026-09-15T13:56:04+00:00
+2026-09-15T07:51:29.927,1,7,51,10596,Strength Training,Facility Operations,34,90,37.8,False,2026-09-15T13:56:04+00:00
+2026-09-15T07:51:30.817,1,7,51,11558,Jungle Annex,Facility Operations,10,36,27.8,False,2026-09-15T13:56:04+00:00
+2026-09-15T07:51:32.163,1,7,51,9721,Indoor Track,Facility Operations,8,50,16.0,False,2026-09-15T13:56:04+00:00
