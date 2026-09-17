@@ -439,3 +439,12 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-09-16T18:23:15.51,2,18,23,9717,Weight Room,Facility Operations,25,55,45.5,False,2026-09-16T23:28:18+00:00
 2026-09-16T18:23:16.167,2,18,23,9728,Boxing Gym,Facility Operations,1,16,6.2,False,2026-09-16T23:28:18+00:00
 2026-09-16T18:23:17.057,2,18,23,9727,Functional Fitness,Facility Operations,2,10,20.0,False,2026-09-16T23:28:18+00:00
+2026-09-16T20:05:09.73,2,20,5,9712,Cardio Gallery,Facility Operations,32,89,36.0,False,2026-09-17T01:09:50+00:00
+2026-09-16T20:05:10.933,2,20,5,10596,Strength Training,Facility Operations,36,90,40.0,False,2026-09-17T01:09:50+00:00
+2026-09-16T20:05:11.807,2,20,5,11558,Jungle Annex,Facility Operations,16,36,44.4,False,2026-09-17T01:09:50+00:00
+2026-09-16T20:05:13.34,2,20,5,9721,Indoor Track,Facility Operations,8,50,16.0,False,2026-09-17T01:09:50+00:00
+2026-09-16T20:05:16.48,2,20,5,9720,South Courts,Facility Operations,25,40,62.5,False,2026-09-17T01:09:50+00:00
+2026-09-16T20:05:17.62,2,20,5,9717,Weight Room,Facility Operations,29,55,52.7,False,2026-09-17T01:09:50+00:00
+2026-09-16T20:05:18.777,2,20,5,9728,Boxing Gym,Facility Operations,1,16,6.2,False,2026-09-17T01:09:50+00:00
+2026-09-16T20:05:24.23,2,20,5,9727,Functional Fitness,Facility Operations,2,10,20.0,False,2026-09-17T01:09:50+00:00
+2026-09-16T20:05:25.39,2,20,5,9731,Outdoor Fitness,Facility Operations,16,45,35.6,False,2026-09-17T01:09:50+00:00
