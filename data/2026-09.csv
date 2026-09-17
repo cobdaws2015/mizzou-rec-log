@@ -451,3 +451,7 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-09-16T21:07:49.483,2,21,7,9720,South Courts,Facility Operations,33,40,82.5,False,2026-09-17T02:10:08+00:00
 2026-09-16T21:07:50.577,2,21,7,9717,Weight Room,Facility Operations,15,55,27.3,False,2026-09-17T02:10:08+00:00
 2026-09-16T21:07:51.47,2,21,7,9731,Outdoor Fitness,Facility Operations,5,45,11.1,False,2026-09-17T02:10:08+00:00
+2026-09-16T21:11:48.7,2,21,11,9712,Cardio Gallery,Facility Operations,27,89,30.3,False,2026-09-17T02:20:12+00:00
+2026-09-16T21:11:49.357,2,21,11,10596,Strength Training,Facility Operations,34,90,37.8,False,2026-09-17T02:20:12+00:00
+2026-09-16T21:11:50.043,2,21,11,11558,Jungle Annex,Facility Operations,14,36,38.9,False,2026-09-17T02:20:12+00:00
+2026-09-16T21:11:50.777,2,21,11,9721,Indoor Track,Facility Operations,11,50,22.0,False,2026-09-17T02:20:12+00:00
