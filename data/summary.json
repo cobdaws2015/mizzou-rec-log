@@ -1,7 +1,7 @@
 {
  "coverage": {
-  "days_observed": 14,
-  "days_spanned": 15,
+  "days_observed": 15,
+  "days_spanned": 16,
   "explained_days": {
    "2026-09-19": "home game vs Troy"
   },
@@ -56,7 +56,7 @@
   "unexplained_days": [],
   "window_starts": "2026-09-07"
  },
- "days_observed": 14,
+ "days_observed": 15,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -64,8 +64,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-22T02:56:00+00:00",
- "last_day": "2026-09-21",
+ "generated_at": "2026-09-22T14:16:00+00:00",
+ "last_day": "2026-09-22",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -275,6 +275,11 @@
       "pct": 12
      },
      "20": {
+      "count": 2,
+      "n": 1,
+      "pct": 12
+     },
+     "9": {
       "count": 2,
       "n": 1,
       "pct": 12
@@ -699,6 +704,11 @@
       "count": 22,
       "n": 1,
       "pct": 25
+     },
+     "9": {
+      "count": 24,
+      "n": 1,
+      "pct": 27
      }
     },
     "Wed": {
@@ -898,6 +908,11 @@
       "count": 2,
       "n": 1,
       "pct": 25
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Wed": {
@@ -1082,6 +1097,11 @@
       "count": 3,
       "n": 1,
       "pct": 30
+     },
+     "9": {
+      "count": 2,
+      "n": 1,
+      "pct": 20
      }
     },
     "Wed": {
@@ -1341,6 +1361,11 @@
       "count": 7,
       "n": 1,
       "pct": 14
+     },
+     "9": {
+      "count": 11,
+      "n": 1,
+      "pct": 22
      }
     },
     "Wed": {
@@ -1615,6 +1640,11 @@
       "count": 12,
       "n": 1,
       "pct": 33
+     },
+     "9": {
+      "count": 14,
+      "n": 1,
+      "pct": 39
      }
     },
     "Wed": {
@@ -1944,6 +1974,11 @@
       "count": 8,
       "n": 1,
       "pct": 18
+     },
+     "9": {
+      "count": 2,
+      "n": 1,
+      "pct": 4
      }
     },
     "Wed": {
@@ -2135,6 +2170,11 @@
       "pct": 12
      },
      "20": {
+      "count": 2,
+      "n": 1,
+      "pct": 5
+     },
+     "9": {
       "count": 2,
       "n": 1,
       "pct": 5
@@ -2407,6 +2447,11 @@
       "count": 41,
       "n": 1,
       "pct": 46
+     },
+     "9": {
+      "count": 36,
+      "n": 1,
+      "pct": 40
      }
     },
     "Wed": {
@@ -2631,6 +2676,11 @@
       "count": 31,
       "n": 1,
       "pct": 56
+     },
+     "9": {
+      "count": 24,
+      "n": 1,
+      "pct": 44
      }
     },
     "Wed": {
@@ -2713,8 +2763,8 @@
      "n": 9
     },
     "Tue": {
-     "factor": 1.18,
-     "n": 10
+     "factor": 1.14,
+     "n": 11
     },
     "Wed": {
      "factor": 1.18,
@@ -2783,8 +2833,8 @@
      "pct": 25
     },
     "9": {
-     "n": 3,
-     "pct": 20
+     "n": 4,
+     "pct": 24
     }
    },
    "weekend_hours": {
@@ -2835,7 +2885,7 @@
     },
     "Tue": {
      "factor": 1.14,
-     "n": 10
+     "n": 11
     },
     "Wed": {
      "factor": 1.11,
@@ -2904,8 +2954,8 @@
      "pct": 29
     },
     "9": {
-     "n": 3,
-     "pct": 31
+     "n": 4,
+     "pct": 33
     }
    },
    "weekend_hours": {
@@ -2935,31 +2985,31 @@
    "capacity": 90,
    "day_factor": {
     "Fri": {
-     "factor": 0.69,
+     "factor": 0.7,
      "n": 6
     },
     "Mon": {
-     "factor": 1.19,
+     "factor": 1.2,
      "n": 14
     },
     "Sat": {
-     "factor": 0.86,
+     "factor": 0.88,
      "n": 3
     },
     "Sun": {
-     "factor": 0.23,
+     "factor": 0.24,
      "n": 2
     },
     "Thu": {
-     "factor": 1.06,
+     "factor": 1.08,
      "n": 9
     },
     "Tue": {
      "factor": 1.0,
-     "n": 10
+     "n": 11
     },
     "Wed": {
-     "factor": 0.99,
+     "factor": 1.0,
      "n": 14
     }
    },
@@ -3025,8 +3075,8 @@
      "pct": 46
     },
     "9": {
-     "n": 3,
-     "pct": 32
+     "n": 4,
+     "pct": 33
     }
    },
    "weekend_hours": {
@@ -3076,8 +3126,8 @@
      "n": 9
     },
     "Tue": {
-     "factor": 1.2,
-     "n": 5
+     "factor": 1.14,
+     "n": 6
     },
     "Wed": {
      "factor": 1.0,
@@ -3138,8 +3188,8 @@
      "pct": 29
     },
     "9": {
-     "n": 1,
-     "pct": 16
+     "n": 2,
+     "pct": 30
     }
    },
    "weekend_hours": {
@@ -3162,5 +3212,5 @@
    }
   }
  },
- "samples": 580
+ "samples": 590
 }
