@@ -17,7 +17,7 @@ import csv
 import json
 import statistics
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -53,7 +53,100 @@ def read_rows() -> list[dict]:
     return rows
 
 
-def build(rows: list[dict]) -> dict:
+def parse_ts(raw: str) -> datetime | None:
+    """Parse the Rec's published_at, which carries ragged fractional seconds.
+
+    Values like "2026-09-08T14:30:43.14" have a 2-digit fraction that older
+    fromisoformat() rejects, so the fraction is dropped before parsing. These
+    are naive America/Chicago times; gap arithmetic across a DST boundary is
+    off by an hour twice a year, which does not matter at this resolution.
+    """
+    raw = (raw or "").strip().split(".")[0]
+    if not raw:
+        return None
+    try:
+        return datetime.fromisoformat(raw)
+    except ValueError:
+        return None
+
+
+def read_timestamps() -> list[datetime]:
+    """Every distinct moment the Rec published a count, closed rooms included.
+
+    Deliberately not read_rows(): that one drops closed rooms and blank pcts
+    because they would skew the medians. Here a closed room is evidence, since
+    it proves the counters were alive and talking at that moment.
+    """
+    seen: set[str] = set()
+    for path in sorted(DATA.glob("[0-9][0-9][0-9][0-9]-[0-9][0-9].csv")):
+        with path.open(newline="") as fh:
+            for r in csv.DictReader(fh):
+                if r.get("published_at"):
+                    seen.add(r["published_at"])
+    return sorted(filter(None, (parse_ts(t) for t in seen)))
+
+
+def find_coverage(stamps: list[datetime]) -> dict:
+    """Describe the holes in the record so nothing downstream averages over one.
+
+    A closed Rec does not announce itself. The counters simply stop publishing,
+    the collector sees nothing new and writes no rows, so a closure and a broken
+    scraper leave an identical hole. Overnight that hole is 9-13 hours and
+    expected; a whole dark calendar day is not. 2026-09-19 is the worked
+    example: the Rec shut for the Troy home game and the day vanished.
+    """
+    if not stamps:
+        return {"days_observed": 0, "days_spanned": 0, "missing_days": [],
+                "longest_gaps": [], "window_starts": None, "probe_days": []}
+
+    # Collection ran as a couple of one-off probes in July before it went
+    # continuous on 2026-09-07. Counting the seven dead weeks between them as
+    # "missing days" would bury the holes that actually mean something, so the
+    # window starts after the last multi-week break and the strays are named
+    # separately rather than silently dropped.
+    start = 0
+    for i in range(len(stamps) - 1, 0, -1):
+        if (stamps[i] - stamps[i - 1]).total_seconds() > 7 * 86400:
+            start = i
+            break
+    probes = sorted({d.date().isoformat() for d in stamps[:start]})
+    stamps = stamps[start:]
+
+    observed = {d.date() for d in stamps}
+    first, last = min(observed), max(observed)
+    span = (last - first).days + 1
+
+    missing = []
+    for i in range(span):
+        day = first + timedelta(days=i)
+        if day not in observed:
+            missing.append(day.isoformat())
+
+    # No threshold on purpose. Weekends and overnights make any fixed cutoff
+    # either noisy or blind, so hand over the biggest few and let a human look.
+    gaps = []
+    for a, b in zip(stamps, stamps[1:]):
+        hours = (b - a).total_seconds() / 3600
+        dark = {(a.date() + timedelta(days=n)).isoformat() for n in range(1, (b.date() - a.date()).days)}
+        gaps.append({
+            "from": a.isoformat(timespec="minutes"),
+            "to": b.isoformat(timespec="minutes"),
+            "hours": round(hours, 1),
+            "dark_days": sorted(dark & set(missing)),
+        })
+    gaps.sort(key=lambda g: -g["hours"])
+
+    return {
+        "days_observed": len(observed),
+        "days_spanned": span,
+        "window_starts": first.isoformat(),
+        "probe_days": probes,
+        "missing_days": missing,
+        "longest_gaps": gaps[:5],
+    }
+
+
+def build(rows: list[dict], coverage: dict | None = None) -> dict:
     buckets: dict[str, dict[tuple[int, int], list[dict]]] = defaultdict(
         lambda: defaultdict(list)
     )
@@ -86,6 +179,7 @@ def build(rows: list[dict]) -> dict:
         "days_observed": len(dates),
         "first_day": min(dates) if dates else None,
         "last_day": max(dates) if dates else None,
+        "coverage": coverage or {},
         "featured": [n for n in FEATURED if n in locations],
         "locations": locations,
     }
@@ -147,10 +241,18 @@ def main() -> None:
     args = ap.parse_args()
 
     rows = read_rows()
-    summary = build(rows)
+    coverage = find_coverage(read_timestamps())
+    summary = build(rows, coverage)
     DATA.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(summary, indent=1, sort_keys=True) + "\n")
     print(f"summary: {summary['samples']} samples, {summary['days_observed']} days")
+
+    missing = coverage["missing_days"]
+    if missing:
+        print(f"  {len(missing)} day(s) with no data at all: {', '.join(missing)}")
+    if coverage["longest_gaps"]:
+        worst = coverage["longest_gaps"][0]
+        print(f"  longest silence: {worst['hours']}h, {worst['from']} -> {worst['to']}")
 
     if args.show:
         print_grid(summary, args.show)
