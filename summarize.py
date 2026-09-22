@@ -86,6 +86,51 @@ def read_timestamps() -> list[datetime]:
     return sorted(filter(None, (parse_ts(t) for t in seen)))
 
 
+# A weekday-by-hour cell needs weeks to fill: 7 days x 17 hours is 119 buckets
+# and the Rec republishes about once an hour, so every cell sits at n=1 or n=2
+# for over a month. Pooling the hour shape across Mon-Fri and scaling it by a
+# per-day factor spends the same samples on 17 buckets plus 7 scalars instead,
+# which is answerable today. Weekends keep their own shape because the Rec opens
+# late and the curve is a different animal, not a scaled weekday.
+def build_profiles(rows: list[dict]) -> dict:
+    out: dict[str, dict] = {}
+    for loc in FEATURED:
+        mine = [r for r in rows if r["location"] == loc]
+        if not mine:
+            continue
+
+        def bucket(sel) -> dict[str, dict]:
+            acc: dict[int, list[float]] = defaultdict(list)
+            for r in mine:
+                if sel(r):
+                    acc[r["_hour"]].append(r["_pct"])
+            return {
+                str(h): {"pct": round(statistics.median(v)), "n": len(v)}
+                for h, v in sorted(acc.items())
+            }
+
+        # Factors are computed from staffed hours only. Including 5am, when
+        # every day reads near zero, would flatten the differences between days.
+        staffed = [r["_pct"] for r in mine if r["_hour"] >= 7]
+        base = statistics.median(staffed) if staffed else 0
+        factors: dict[str, dict] = {}
+        for wd in range(7):
+            v = [r["_pct"] for r in mine if r["_weekday"] == wd and r["_hour"] >= 7]
+            if v and base:
+                factors[DAYS[wd]] = {
+                    "factor": round(statistics.median(v) / base, 2),
+                    "n": len(v),
+                }
+
+        out[loc] = {
+            "capacity": next((int(r["capacity"]) for r in mine if r.get("capacity")), 0),
+            "weekday_hours": bucket(lambda r: r["_weekday"] < 5),
+            "weekend_hours": bucket(lambda r: r["_weekday"] >= 5),
+            "day_factor": factors,
+        }
+    return out
+
+
 def read_home_games() -> dict[str, str]:
     """Map a date to the opponent Mizzou hosted that day, if any.
 
@@ -211,6 +256,7 @@ def build(rows: list[dict], coverage: dict | None = None) -> dict:
         "first_day": min(dates) if dates else None,
         "last_day": max(dates) if dates else None,
         "coverage": coverage or {},
+        "profiles": build_profiles(rows),
         "featured": [n for n in FEATURED if n in locations],
         "locations": locations,
     }
