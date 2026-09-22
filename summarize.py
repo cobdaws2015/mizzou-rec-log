@@ -86,7 +86,28 @@ def read_timestamps() -> list[datetime]:
     return sorted(filter(None, (parse_ts(t) for t in seen)))
 
 
-def find_coverage(stamps: list[datetime]) -> dict:
+def read_home_games() -> dict[str, str]:
+    """Map a date to the opponent Mizzou hosted that day, if any.
+
+    A home game appears to shut the Rec for the whole day, and a shut Rec is
+    indistinguishable from a broken scraper without this. Away games are in the
+    file too but are not returned, since the Rec stays open for those.
+    """
+    path = DATA / "home_games.json"
+    if not path.exists():
+        return {}
+    try:
+        blob = json.loads(path.read_text())
+    except (json.JSONDecodeError, OSError):
+        return {}
+    return {
+        g["date"]: g.get("opponent", "?")
+        for g in blob.get("games", [])
+        if g.get("home") and g.get("date")
+    }
+
+
+def find_coverage(stamps: list[datetime], home_games: dict[str, str] | None = None) -> dict:
     """Describe the holes in the record so nothing downstream averages over one.
 
     A closed Rec does not announce itself. The counters simply stop publishing,
@@ -97,7 +118,9 @@ def find_coverage(stamps: list[datetime]) -> dict:
     """
     if not stamps:
         return {"days_observed": 0, "days_spanned": 0, "missing_days": [],
-                "longest_gaps": [], "window_starts": None, "probe_days": []}
+                "explained_days": {}, "unexplained_days": [],
+                "next_home_games": [], "longest_gaps": [],
+                "window_starts": None, "probe_days": []}
 
     # Collection ran as a couple of one-off probes in July before it went
     # continuous on 2026-09-07. Counting the seven dead weeks between them as
@@ -116,11 +139,16 @@ def find_coverage(stamps: list[datetime]) -> dict:
     first, last = min(observed), max(observed)
     span = (last - first).days + 1
 
+    home_games = home_games or {}
     missing = []
+    explained = {}
     for i in range(span):
         day = first + timedelta(days=i)
         if day not in observed:
-            missing.append(day.isoformat())
+            iso = day.isoformat()
+            missing.append(iso)
+            if iso in home_games:
+                explained[iso] = f"home game vs {home_games[iso]}"
 
     # No threshold on purpose. Weekends and overnights make any fixed cutoff
     # either noisy or blind, so hand over the biggest few and let a human look.
@@ -142,6 +170,9 @@ def find_coverage(stamps: list[datetime]) -> dict:
         "window_starts": first.isoformat(),
         "probe_days": probes,
         "missing_days": missing,
+        "explained_days": explained,
+        "unexplained_days": [d for d in missing if d not in explained],
+        "next_home_games": sorted(d for d in home_games if d > last.isoformat()),
         "longest_gaps": gaps[:5],
     }
 
@@ -241,15 +272,19 @@ def main() -> None:
     args = ap.parse_args()
 
     rows = read_rows()
-    coverage = find_coverage(read_timestamps())
+    coverage = find_coverage(read_timestamps(), read_home_games())
     summary = build(rows, coverage)
     DATA.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(summary, indent=1, sort_keys=True) + "\n")
     print(f"summary: {summary['samples']} samples, {summary['days_observed']} days")
 
-    missing = coverage["missing_days"]
-    if missing:
-        print(f"  {len(missing)} day(s) with no data at all: {', '.join(missing)}")
+    for day in coverage["missing_days"]:
+        why = coverage["explained_days"].get(day, "unexplained")
+        print(f"  no data at all on {day} ({why})")
+    upcoming = coverage["next_home_games"]
+    if upcoming:
+        nxt = upcoming[0]
+        print(f"  next home game {nxt} vs {read_home_games()[nxt]} - expect a dark day")
     if coverage["longest_gaps"]:
         worst = coverage["longest_gaps"][0]
         print(f"  longest silence: {worst['hours']}h, {worst['from']} -> {worst['to']}")

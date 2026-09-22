@@ -1,0 +1,19 @@
+{
+  "_why": "Mizzou home football dates. A home game appears to close the Rec for the whole day, which shows up in the record as silence rather than as closed rooms (see 2026-09-19 vs Troy). Cross-referencing lets summarize.py label a dark day instead of leaving it a mystery. Away games are listed as false so the file doubles as the control group.",
+  "_source": "https://mutigers.com/sports/football/schedule",
+  "_updated": "2026-09-21",
+  "games": [
+    { "date": "2026-09-03", "opponent": "Arkansas-Pine Bluff", "home": true },
+    { "date": "2026-09-11", "opponent": "Kansas", "home": false },
+    { "date": "2026-09-19", "opponent": "Troy", "home": true },
+    { "date": "2026-09-26", "opponent": "Mississippi State", "home": false },
+    { "date": "2026-10-03", "opponent": "Florida", "home": true },
+    { "date": "2026-10-10", "opponent": "Texas A&M", "home": true },
+    { "date": "2026-10-17", "opponent": "Ole Miss", "home": false },
+    { "date": "2026-10-31", "opponent": "Arkansas", "home": false },
+    { "date": "2026-11-07", "opponent": "Texas", "home": true },
+    { "date": "2026-11-14", "opponent": "Georgia", "home": false },
+    { "date": "2026-11-21", "opponent": "Kentucky", "home": true },
+    { "date": "2026-11-28", "opponent": "Oklahoma", "home": true }
+  ]
+}

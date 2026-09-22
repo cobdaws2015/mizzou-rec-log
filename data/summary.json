@@ -2,6 +2,9 @@
  "coverage": {
   "days_observed": 14,
   "days_spanned": 15,
+  "explained_days": {
+   "2026-09-19": "home game vs Troy"
+  },
   "longest_gaps": [
    {
     "dark_days": [
@@ -39,10 +42,18 @@
   "missing_days": [
    "2026-09-19"
   ],
+  "next_home_games": [
+   "2026-10-03",
+   "2026-10-10",
+   "2026-11-07",
+   "2026-11-21",
+   "2026-11-28"
+  ],
   "probe_days": [
    "2026-07-20",
    "2026-07-23"
   ],
+  "unexplained_days": [],
   "window_starts": "2026-09-07"
  },
  "days_observed": 14,
@@ -53,7 +64,7 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-22T02:47:57+00:00",
+ "generated_at": "2026-09-22T02:53:35+00:00",
  "last_day": "2026-09-21",
  "locations": {
   "50m Pool": {
