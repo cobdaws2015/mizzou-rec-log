@@ -64,7 +64,7 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-25T15:23:24+00:00",
+ "generated_at": "2026-09-25T17:49:19+00:00",
  "last_day": "2026-09-25",
  "locations": {
   "50m Pool": {
@@ -114,6 +114,11 @@
    "capacity": 16,
    "grid": {
     "Fri": {
+     "11": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
      "12": {
       "count": 0,
       "n": 1,
@@ -383,6 +388,11 @@
    "capacity": 50,
    "grid": {
     "Fri": {
+     "11": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
      "12": {
       "count": 4,
       "n": 1,
@@ -844,6 +854,11 @@
    "capacity": 8,
    "grid": {
     "Fri": {
+     "11": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
      "12": {
       "count": 0,
       "n": 1,
@@ -1038,6 +1053,11 @@
    "capacity": 10,
    "grid": {
     "Fri": {
+     "11": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
      "12": {
       "count": 0,
       "n": 1,
@@ -1910,6 +1930,11 @@
    "capacity": 40,
    "grid": {
     "Fri": {
+     "11": {
+      "count": 5,
+      "n": 1,
+      "pct": 12
+     },
      "12": {
       "count": 0,
       "n": 1,
@@ -2083,6 +2108,13 @@
   "Outdoor Fitness": {
    "capacity": 45,
    "grid": {
+    "Fri": {
+     "11": {
+      "count": 4,
+      "n": 1,
+      "pct": 9
+     }
+    },
     "Mon": {
      "12": {
       "count": 8,
@@ -2832,6 +2864,11 @@
    "capacity": 55,
    "grid": {
     "Fri": {
+     "11": {
+      "count": 16,
+      "n": 1,
+      "pct": 29
+     },
      "12": {
       "count": 16,
       "n": 1,
@@ -3483,8 +3520,8 @@
    "capacity": 55,
    "day_factor": {
     "Fri": {
-     "factor": 0.96,
-     "n": 8
+     "factor": 0.83,
+     "n": 9
     },
     "Mon": {
      "factor": 1.15,
@@ -3517,8 +3554,8 @@
      "pct": 37
     },
     "11": {
-     "n": 1,
-     "pct": 38
+     "n": 2,
+     "pct": 34
     },
     "12": {
      "n": 6,
@@ -3601,5 +3638,5 @@
    }
   }
  },
- "samples": 768
+ "samples": 775
 }
