@@ -1,7 +1,7 @@
 {
  "coverage": {
-  "days_observed": 22,
-  "days_spanned": 23,
+  "days_observed": 23,
+  "days_spanned": 24,
   "explained_days": {
    "2026-09-19": "home game vs Troy"
   },
@@ -56,7 +56,7 @@
   "unexplained_days": [],
   "window_starts": "2026-09-07"
  },
- "days_observed": 22,
+ "days_observed": 23,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -64,8 +64,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-09-30T03:10:36+00:00",
- "last_day": "2026-09-29",
+ "generated_at": "2026-09-30T15:35:02+00:00",
+ "last_day": "2026-09-30",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -352,9 +352,9 @@
     },
     "Wed": {
      "10": {
-      "count": 1,
-      "n": 2,
-      "pct": 6
+      "count": 2,
+      "n": 3,
+      "pct": 12
      },
      "12": {
       "count": 1,
@@ -898,9 +898,9 @@
     },
     "Wed": {
      "10": {
-      "count": 21,
-      "n": 3,
-      "pct": 24
+      "count": 20,
+      "n": 4,
+      "pct": 22
      },
      "13": {
       "count": 19,
@@ -1163,7 +1163,7 @@
     "Wed": {
      "10": {
       "count": 0,
-      "n": 2,
+      "n": 3,
       "pct": 0
      },
      "6": {
@@ -1427,7 +1427,7 @@
     "Wed": {
      "10": {
       "count": 0,
-      "n": 2,
+      "n": 3,
       "pct": 0
      },
      "12": {
@@ -1770,9 +1770,9 @@
     },
     "Wed": {
      "10": {
-      "count": 9,
-      "n": 3,
-      "pct": 18
+      "count": 10,
+      "n": 4,
+      "pct": 19
      },
      "13": {
       "count": 19,
@@ -2114,9 +2114,9 @@
     },
     "Wed": {
      "10": {
-      "count": 15,
-      "n": 3,
-      "pct": 42
+      "count": 14,
+      "n": 4,
+      "pct": 38
      },
      "13": {
       "count": 14,
@@ -2557,9 +2557,9 @@
     },
     "Wed": {
      "10": {
-      "count": 6,
-      "n": 2,
-      "pct": 14
+      "count": 5,
+      "n": 3,
+      "pct": 11
      },
      "12": {
       "count": 7,
@@ -3175,9 +3175,9 @@
     },
     "Wed": {
      "10": {
-      "count": 27,
-      "n": 3,
-      "pct": 30
+      "count": 30,
+      "n": 4,
+      "pct": 33
      },
      "13": {
       "count": 42,
@@ -3479,9 +3479,9 @@
     },
     "Wed": {
      "10": {
-      "count": 18,
-      "n": 2,
-      "pct": 33
+      "count": 21,
+      "n": 3,
+      "pct": 38
      },
      "12": {
       "count": 23,
@@ -3581,14 +3581,14 @@
      "n": 24
     },
     "Wed": {
-     "factor": 1.05,
-     "n": 21
+     "factor": 1.02,
+     "n": 22
     }
    },
    "weekday_hours": {
     "10": {
-     "n": 5,
-     "pct": 24
+     "n": 6,
+     "pct": 23
     },
     "11": {
      "n": 1,
@@ -3723,13 +3723,13 @@
     },
     "Wed": {
      "factor": 1.07,
-     "n": 20
+     "n": 21
     }
    },
    "weekday_hours": {
     "10": {
-     "n": 5,
-     "pct": 42
+     "n": 6,
+     "pct": 40
     },
     "11": {
      "n": 1,
@@ -3863,14 +3863,14 @@
      "n": 24
     },
     "Wed": {
-     "factor": 1.08,
-     "n": 21
+     "factor": 1.05,
+     "n": 22
     }
    },
    "weekday_hours": {
     "10": {
-     "n": 5,
-     "pct": 30
+     "n": 6,
+     "pct": 33
     },
     "11": {
      "n": 1,
@@ -3980,38 +3980,38 @@
    "capacity": 55,
    "day_factor": {
     "Fri": {
-     "factor": 0.84,
+     "factor": 0.86,
      "n": 9
     },
     "Mon": {
-     "factor": 1.24,
+     "factor": 1.27,
      "n": 15
     },
     "Sat": {
-     "factor": 0.76,
+     "factor": 0.77,
      "n": 5
     },
     "Sun": {
-     "factor": 0.53,
+     "factor": 0.55,
      "n": 3
     },
     "Thu": {
-     "factor": 0.89,
+     "factor": 0.91,
      "n": 12
     },
     "Tue": {
-     "factor": 1.02,
+     "factor": 1.04,
      "n": 17
     },
     "Wed": {
-     "factor": 1.07,
-     "n": 19
+     "factor": 1.04,
+     "n": 20
     }
    },
    "weekday_hours": {
     "10": {
-     "n": 6,
-     "pct": 37
+     "n": 7,
+     "pct": 38
     },
     "11": {
      "n": 2,
@@ -4102,5 +4102,5 @@
    }
   }
  },
- "samples": 908
+ "samples": 917
 }
