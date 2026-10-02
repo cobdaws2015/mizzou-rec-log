@@ -64,7 +64,7 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-10-02T14:25:38+00:00",
+ "generated_at": "2026-10-02T15:15:51+00:00",
  "last_day": "2026-10-02",
  "locations": {
   "50m Pool": {
@@ -702,6 +702,11 @@
    "capacity": 89,
    "grid": {
     "Fri": {
+     "10": {
+      "count": 20,
+      "n": 1,
+      "pct": 22
+     },
      "12": {
       "count": 18,
       "n": 1,
@@ -1709,6 +1714,11 @@
    "capacity": 50,
    "grid": {
     "Fri": {
+     "10": {
+      "count": 11,
+      "n": 1,
+      "pct": 22
+     },
      "12": {
       "count": 32,
       "n": 1,
@@ -2083,6 +2093,11 @@
    "capacity": 36,
    "grid": {
     "Fri": {
+     "10": {
+      "count": 8,
+      "n": 1,
+      "pct": 22
+     },
      "12": {
       "count": 22,
       "n": 1,
@@ -3259,6 +3274,11 @@
    "capacity": 90,
    "grid": {
     "Fri": {
+     "10": {
+      "count": 28,
+      "n": 1,
+      "pct": 31
+     },
      "12": {
       "count": 49,
       "n": 1,
@@ -3979,8 +3999,8 @@
    "capacity": 89,
    "day_factor": {
     "Fri": {
-     "factor": 0.52,
-     "n": 8
+     "factor": 0.57,
+     "n": 9
     },
     "Mon": {
      "factor": 1.05,
@@ -4009,7 +4029,7 @@
    },
    "weekday_hours": {
     "10": {
-     "n": 7,
+     "n": 8,
      "pct": 22
     },
     "11": {
@@ -4120,8 +4140,8 @@
    "capacity": 36,
    "day_factor": {
     "Fri": {
-     "factor": 0.61,
-     "n": 8
+     "factor": 0.57,
+     "n": 9
     },
     "Mon": {
      "factor": 1.21,
@@ -4150,8 +4170,8 @@
    },
    "weekday_hours": {
     "10": {
-     "n": 7,
-     "pct": 39
+     "n": 8,
+     "pct": 36
     },
     "11": {
      "n": 3,
@@ -4261,8 +4281,8 @@
    "capacity": 90,
    "day_factor": {
     "Fri": {
-     "factor": 0.61,
-     "n": 8
+     "factor": 0.63,
+     "n": 9
     },
     "Mon": {
      "factor": 1.26,
@@ -4291,8 +4311,8 @@
    },
    "weekday_hours": {
     "10": {
-     "n": 7,
-     "pct": 36
+     "n": 8,
+     "pct": 33
     },
     "11": {
      "n": 3,
@@ -4528,5 +4548,5 @@
    }
   }
  },
- "samples": 1076
+ "samples": 1080
 }
