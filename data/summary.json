@@ -1,7 +1,7 @@
 {
  "coverage": {
-  "days_observed": 26,
-  "days_spanned": 28,
+  "days_observed": 27,
+  "days_spanned": 29,
   "explained_days": {
    "2026-09-19": "home game vs Troy",
    "2026-10-03": "home game vs Florida"
@@ -59,7 +59,7 @@
   "unexplained_days": [],
   "window_starts": "2026-09-07"
  },
- "days_observed": 26,
+ "days_observed": 27,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -67,8 +67,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-10-04T20:26:27+00:00",
- "last_day": "2026-10-04",
+ "generated_at": "2026-10-05T15:04:23+00:00",
+ "last_day": "2026-10-05",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -223,6 +223,11 @@
       "count": 0,
       "n": 1,
       "pct": 0
+     },
+     "9": {
+      "count": 3,
+      "n": 1,
+      "pct": 19
      }
     },
     "Sat": {
@@ -552,6 +557,11 @@
       "count": 0,
       "n": 1,
       "pct": 0
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Sat": {
@@ -828,9 +838,9 @@
       "pct": 10
      },
      "9": {
-      "count": 18,
-      "n": 1,
-      "pct": 20
+      "count": 21,
+      "n": 2,
+      "pct": 24
      }
     },
     "Sat": {
@@ -1215,6 +1225,11 @@
       "count": 0,
       "n": 1,
       "pct": 0
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Sat": {
@@ -1516,6 +1531,11 @@
       "pct": 10
      },
      "8": {
+      "count": 2,
+      "n": 1,
+      "pct": 20
+     },
+     "9": {
       "count": 2,
       "n": 1,
       "pct": 20
@@ -1870,9 +1890,9 @@
       "pct": 24
      },
      "9": {
-      "count": 11,
-      "n": 1,
-      "pct": 22
+      "count": 10,
+      "n": 2,
+      "pct": 20
      }
     },
     "Sat": {
@@ -2269,9 +2289,9 @@
       "pct": 25
      },
      "9": {
-      "count": 11,
-      "n": 1,
-      "pct": 31
+      "count": 12,
+      "n": 2,
+      "pct": 33
      }
     },
     "Sat": {
@@ -2656,6 +2676,11 @@
       "count": 0,
       "n": 1,
       "pct": 0
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Sat": {
@@ -2890,6 +2915,11 @@
       "count": 8,
       "n": 1,
       "pct": 18
+     },
+     "9": {
+      "count": 3,
+      "n": 1,
+      "pct": 7
      }
     },
     "Sat": {
@@ -3166,6 +3196,11 @@
       "pct": 0
      },
      "8": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
+     },
+     "9": {
       "count": 0,
       "n": 1,
       "pct": 0
@@ -3490,9 +3525,9 @@
       "pct": 19
      },
      "9": {
-      "count": 31,
-      "n": 1,
-      "pct": 34
+      "count": 24,
+      "n": 2,
+      "pct": 26
      }
     },
     "Sat": {
@@ -3882,6 +3917,11 @@
       "count": 13,
       "n": 1,
       "pct": 24
+     },
+     "9": {
+      "count": 10,
+      "n": 1,
+      "pct": 18
      }
     },
     "Sat": {
@@ -4127,31 +4167,31 @@
    "capacity": 89,
    "day_factor": {
     "Fri": {
-     "factor": 0.73,
+     "factor": 0.71,
      "n": 12
     },
     "Mon": {
      "factor": 1.07,
-     "n": 17
+     "n": 18
     },
     "Sat": {
-     "factor": 0.85,
+     "factor": 0.83,
      "n": 6
     },
     "Sun": {
-     "factor": 0.63,
+     "factor": 0.62,
      "n": 7
     },
     "Thu": {
-     "factor": 1.07,
+     "factor": 1.05,
      "n": 19
     },
     "Tue": {
-     "factor": 1.17,
+     "factor": 1.14,
      "n": 24
     },
     "Wed": {
-     "factor": 1.07,
+     "factor": 1.05,
      "n": 29
     }
    },
@@ -4225,7 +4265,7 @@
      "pct": 20
     },
     "9": {
-     "n": 8,
+     "n": 9,
      "pct": 20
     }
    },
@@ -4276,8 +4316,8 @@
      "n": 12
     },
     "Mon": {
-     "factor": 1.21,
-     "n": 17
+     "factor": 1.11,
+     "n": 18
     },
     "Sat": {
      "factor": 0.71,
@@ -4370,8 +4410,8 @@
      "pct": 25
     },
     "9": {
-     "n": 8,
-     "pct": 25
+     "n": 9,
+     "pct": 28
     }
    },
    "weekend_hours": {
@@ -4421,8 +4461,8 @@
      "n": 12
     },
     "Mon": {
-     "factor": 1.3,
-     "n": 17
+     "factor": 1.27,
+     "n": 18
     },
     "Sat": {
      "factor": 0.73,
@@ -4515,7 +4555,7 @@
      "pct": 33
     },
     "9": {
-     "n": 8,
+     "n": 9,
      "pct": 31
     }
    },
@@ -4566,8 +4606,8 @@
      "n": 13
     },
     "Mon": {
-     "factor": 1.27,
-     "n": 15
+     "factor": 1.21,
+     "n": 16
     },
     "Sat": {
      "factor": 0.77,
@@ -4660,8 +4700,8 @@
      "pct": 18
     },
     "9": {
-     "n": 6,
-     "pct": 24
+     "n": 7,
+     "pct": 20
     }
    },
    "weekend_hours": {
@@ -4688,5 +4728,5 @@
    }
   }
  },
- "samples": 1142
+ "samples": 1154
 }
