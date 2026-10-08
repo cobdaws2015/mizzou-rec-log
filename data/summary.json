@@ -67,7 +67,7 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-10-08T17:26:50+00:00",
+ "generated_at": "2026-10-08T18:41:14+00:00",
  "last_day": "2026-10-08",
  "locations": {
   "50m Pool": {
@@ -97,6 +97,11 @@
       "count": 7,
       "n": 1,
       "pct": 16
+     },
+     "13": {
+      "count": 2,
+      "n": 1,
+      "pct": 4
      }
     },
     "Tue": {
@@ -1500,6 +1505,18 @@
       "count": 0,
       "n": 2,
       "pct": 0
+     }
+    }
+   }
+  },
+  "Dive Well": {
+   "capacity": 20,
+   "grid": {
+    "Thu": {
+     "13": {
+      "count": 1,
+      "n": 1,
+      "pct": 5
      }
     }
    }
@@ -4928,5 +4945,5 @@
    }
   }
  },
- "samples": 1359
+ "samples": 1361
 }
