@@ -553,3 +553,5 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-10-11T17:34:03.883,6,17,34,9728,Boxing Gym,Facility Operations,0,16,0.0,False,2026-10-11T22:35:25+00:00
 2026-10-11T17:34:04.82,6,17,34,9727,Functional Fitness,Facility Operations,0,10,0.0,False,2026-10-11T22:35:25+00:00
 2026-10-11T17:34:05.633,6,17,34,9731,Outdoor Fitness,Facility Operations,3,45,6.7,False,2026-10-11T22:35:25+00:00
+2026-10-12T06:13:50.057,0,6,13,10163,50m Pool,Aquatics,0,45,0.0,True,2026-10-12T12:09:46+00:00
+2026-10-12T06:13:50.763,0,6,13,10164,Dive Well,Aquatics,3,20,15.0,False,2026-10-12T12:09:46+00:00
