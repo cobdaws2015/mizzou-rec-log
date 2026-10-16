@@ -1,7 +1,7 @@
 {
  "coverage": {
-  "days_observed": 36,
-  "days_spanned": 39,
+  "days_observed": 37,
+  "days_spanned": 40,
   "explained_days": {
    "2026-09-19": "home game vs Troy",
    "2026-10-03": "home game vs Florida",
@@ -62,7 +62,7 @@
   "unexplained_days": [],
   "window_starts": "2026-09-07"
  },
- "days_observed": 36,
+ "days_observed": 37,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -70,8 +70,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-10-16T02:13:55+00:00",
- "last_day": "2026-10-15",
+ "generated_at": "2026-10-16T11:12:01+00:00",
+ "last_day": "2026-10-16",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -189,7 +189,7 @@
      },
      "6": {
       "count": 0,
-      "n": 1,
+      "n": 2,
       "pct": 0
      },
      "7": {
@@ -1820,9 +1820,9 @@
       "pct": 0
      },
      "6": {
-      "count": 2,
-      "n": 1,
-      "pct": 20
+      "count": 1,
+      "n": 2,
+      "pct": 10
      },
      "7": {
       "count": 0,
@@ -3118,7 +3118,7 @@
      },
      "6": {
       "count": 0,
-      "n": 1,
+      "n": 2,
       "pct": 0
      },
      "7": {
@@ -3472,8 +3472,8 @@
      },
      "6": {
       "count": 0,
-      "n": 1,
-      "pct": 0
+      "n": 2,
+      "pct": 1
      },
      "9": {
       "count": 5,
@@ -3836,7 +3836,7 @@
      },
      "6": {
       "count": 0,
-      "n": 1,
+      "n": 2,
       "pct": 0
      },
      "7": {
@@ -4668,9 +4668,9 @@
       "pct": 9
      },
      "6": {
-      "count": 9,
-      "n": 1,
-      "pct": 16
+      "count": 8,
+      "n": 2,
+      "pct": 15
      },
      "7": {
       "count": 7,
@@ -5583,8 +5583,8 @@
      "pct": 9
     },
     "6": {
-     "n": 8,
-     "pct": 17
+     "n": 9,
+     "pct": 16
     },
     "7": {
      "n": 6,
@@ -5635,5 +5635,5 @@
    }
   }
  },
- "samples": 1795
+ "samples": 1801
 }
