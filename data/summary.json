@@ -1,7 +1,7 @@
 {
  "coverage": {
-  "days_observed": 37,
-  "days_spanned": 40,
+  "days_observed": 38,
+  "days_spanned": 41,
   "explained_days": {
    "2026-09-19": "home game vs Troy",
    "2026-10-03": "home game vs Florida",
@@ -62,7 +62,7 @@
   "unexplained_days": [],
   "window_starts": "2026-09-07"
  },
- "days_observed": 37,
+ "days_observed": 38,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -70,8 +70,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-10-16T23:36:29+00:00",
- "last_day": "2026-10-16",
+ "generated_at": "2026-10-17T15:03:16+00:00",
+ "last_day": "2026-10-17",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -290,6 +290,11 @@
       "count": 1,
       "n": 1,
       "pct": 6
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Sun": {
@@ -694,6 +699,11 @@
       "count": 19,
       "n": 1,
       "pct": 38
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Sun": {
@@ -1068,6 +1078,11 @@
       "count": 16,
       "n": 1,
       "pct": 18
+     },
+     "9": {
+      "count": 3,
+      "n": 1,
+      "pct": 3
      }
     },
     "Sun": {
@@ -1502,6 +1517,11 @@
       "count": 0,
       "n": 1,
       "pct": 0
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Sun": {
@@ -1927,6 +1947,11 @@
       "count": 1,
       "n": 1,
       "pct": 10
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Sun": {
@@ -2346,6 +2371,11 @@
       "count": 5,
       "n": 1,
       "pct": 10
+     },
+     "9": {
+      "count": 2,
+      "n": 1,
+      "pct": 4
      }
     },
     "Sun": {
@@ -2790,6 +2820,11 @@
       "count": 14,
       "n": 1,
       "pct": 39
+     },
+     "9": {
+      "count": 1,
+      "n": 1,
+      "pct": 3
      }
     },
     "Sun": {
@@ -3583,6 +3618,11 @@
       "count": 4,
       "n": 1,
       "pct": 9
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Sun": {
@@ -3947,6 +3987,11 @@
       "count": 8,
       "n": 1,
       "pct": 20
+     },
+     "9": {
+      "count": 0,
+      "n": 1,
+      "pct": 0
      }
     },
     "Sun": {
@@ -4356,6 +4401,11 @@
       "count": 37,
       "n": 1,
       "pct": 41
+     },
+     "9": {
+      "count": 4,
+      "n": 1,
+      "pct": 4
      }
     },
     "Sun": {
@@ -4795,6 +4845,11 @@
       "count": 22,
       "n": 1,
       "pct": 40
+     },
+     "9": {
+      "count": 2,
+      "n": 1,
+      "pct": 4
      }
     },
     "Sun": {
@@ -5076,8 +5131,8 @@
      "n": 29
     },
     "Sat": {
-     "factor": 0.87,
-     "n": 6
+     "factor": 0.85,
+     "n": 7
     },
     "Sun": {
      "factor": 0.67,
@@ -5212,8 +5267,8 @@
      "pct": 2
     },
     "9": {
-     "n": 1,
-     "pct": 8
+     "n": 2,
+     "pct": 6
     }
    }
   },
@@ -5221,31 +5276,31 @@
    "capacity": 36,
    "day_factor": {
     "Fri": {
-     "factor": 0.71,
+     "factor": 0.74,
      "n": 20
     },
     "Mon": {
-     "factor": 1.14,
+     "factor": 1.18,
      "n": 29
     },
     "Sat": {
-     "factor": 0.71,
-     "n": 6
+     "factor": 0.67,
+     "n": 7
     },
     "Sun": {
-     "factor": 0.36,
+     "factor": 0.37,
      "n": 12
     },
     "Thu": {
-     "factor": 1.0,
+     "factor": 1.04,
      "n": 34
     },
     "Tue": {
-     "factor": 1.11,
+     "factor": 1.15,
      "n": 32
     },
     "Wed": {
-     "factor": 1.0,
+     "factor": 1.04,
      "n": 42
     }
    },
@@ -5365,8 +5420,8 @@
      "pct": 3
     },
     "9": {
-     "n": 1,
-     "pct": 14
+     "n": 2,
+     "pct": 8
     }
    }
   },
@@ -5382,8 +5437,8 @@
      "n": 29
     },
     "Sat": {
-     "factor": 0.73,
-     "n": 6
+     "factor": 0.54,
+     "n": 7
     },
     "Sun": {
      "factor": 0.53,
@@ -5518,8 +5573,8 @@
      "pct": 3
     },
     "9": {
-     "n": 1,
-     "pct": 14
+     "n": 2,
+     "pct": 9
     }
    }
   },
@@ -5535,8 +5590,8 @@
      "n": 23
     },
     "Sat": {
-     "factor": 0.81,
-     "n": 5
+     "factor": 0.76,
+     "n": 6
     },
     "Sun": {
      "factor": 0.57,
@@ -5659,11 +5714,11 @@
      "pct": 6
     },
     "9": {
-     "n": 1,
-     "pct": 11
+     "n": 2,
+     "pct": 7
     }
    }
   }
  },
- "samples": 1870
+ "samples": 1881
 }
