@@ -1184,3 +1184,4 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-10-20T20:02:07.08,1,20,2,10596,Strength Training,Facility Operations,39,90,43.3,False,2026-10-21T01:06:58+00:00
 2026-10-20T20:02:07.707,1,20,2,11558,Jungle Annex,Facility Operations,22,36,61.1,False,2026-10-21T01:06:58+00:00
 2026-10-20T20:02:08.347,1,20,2,9721,Indoor Track,Facility Operations,8,50,16.0,False,2026-10-21T01:06:58+00:00
+2026-10-20T21:00:20.67,1,21,0,10163,50m Pool,Aquatics,5,45,11.1,False,2026-10-21T02:07:17+00:00
