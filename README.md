@@ -15,6 +15,7 @@ up. This repo samples that endpoint every ten minutes and keeps what it finds.
 | `collect.py` | One sample. Appends any newly published counts to `data/YYYY-MM.csv`. |
 | `summarize.py` | Collapses every sample into `data/summary.json`, a weekday-by-hour median per room. |
 | `data/last_seen.json` | Last timestamp seen per room, so re-polling the same count writes nothing. |
+| `docs/` | A static "best time to go" page that reads `data/summary.json`. No build step. |
 | `.github/workflows/collect.yml` | The cron. Runs on GitHub's runners, commits only when there is something new. |
 
 ## Reading it
@@ -23,7 +24,16 @@ up. This repo samples that endpoint every ten minutes and keeps what it finds.
 python3 summarize.py --print "Strength Training"
 ```
 
-Prints a grid of hours against weekdays, plus the five quietest windows.
+Prints a grid of hours against weekdays, plus the quietest and busiest windows.
+
+Or view the page: from the repo root run `python3 -m http.server`, then open
+<http://localhost:8000/docs/>. Opening `docs/index.html` straight from disk will
+not work, because the page fetches `../data/summary.json`. Served from `/docs`
+on GitHub Pages, it reads the same file from `main` instead.
+
+A weekday-by-hour cell needs at least `MIN_N` readings (3, set in
+`summarize.py`) before the page shows it at full strength or uses it for a best
+or worst window.
 
 ## Notes on the data
 

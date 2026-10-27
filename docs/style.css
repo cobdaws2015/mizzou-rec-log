@@ -1,0 +1,157 @@
+/* High contrast on purpose: no light-gray body text, no hairline type, nothing
+   printed over a pattern. Six heat steps from one blue ramp, each paired with
+   whichever of black or white clears 4.5:1 on it. */
+:root {
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --text: #0b0d10;
+  --edge: #3d4450;
+  --focus: #b4006a;
+  --empty: #e3e6ea;
+  --h0: #cde2fb; --t0: #000000;
+  --h1: #9ec5f4; --t1: #000000;
+  --h2: #6da7ec; --t2: #000000;
+  --h3: #2a78d6; --t3: #ffffff;
+  --h4: #1c5cab; --t4: #ffffff;
+  --h5: #0d366b; --t5: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0e13;
+    --surface: #161b23;
+    --text: #f5f7fa;
+    --edge: #b9c2cf;
+    --focus: #ff7ac6;
+    --empty: #232a35;
+    --h0: #0d366b; --t0: #ffffff;
+    --h1: #184f95; --t1: #ffffff;
+    --h2: #256abf; --t2: #ffffff;
+    --h3: #5598e7; --t3: #000000;
+    --h4: #9ec5f4; --t4: #000000;
+    --h5: #cde2fb; --t5: #000000;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 500 17px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 20px 16px 48px; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 8px; font-weight: 800; }
+h2 { font-size: 1.2rem; margin: 0 0 10px; font-weight: 800; }
+p { margin: 0 0 12px; }
+.lede { font-size: 1.05rem; }
+
+.card {
+  background: var(--surface);
+  border: 2px solid var(--edge);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 0 0 16px;
+}
+
+.picker { display: flex; gap: 12px; align-items: center; margin: 16px 0; flex-wrap: wrap; }
+.picker label { font-weight: 800; }
+select {
+  font: inherit;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--surface);
+  border: 2px solid var(--edge);
+  border-radius: 6px;
+  padding: 8px 10px;
+  min-height: 44px;
+  flex: 1 1 200px;
+  max-width: 100%;
+}
+select:focus-visible, .cell:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+.status { font-weight: 700; }
+
+.windows { display: grid; gap: 16px; grid-template-columns: 1fr; margin-bottom: 16px; }
+.windows .card { margin: 0; }
+@media (min-width: 640px) { .windows { grid-template-columns: 1fr 1fr; } }
+.windows ul { list-style: none; margin: 0; padding: 0; }
+.windows li { padding: 8px 0; border-top: 2px solid var(--empty); }
+.windows li:first-child { border-top: 0; padding-top: 0; }
+.windows strong { font-weight: 800; }
+.windows .n { display: block; font-size: 0.95rem; }
+
+.note { font-size: 1rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 3.4em repeat(7, minmax(0, 1fr));
+  gap: 3px;
+  margin: 8px 0 12px;
+}
+.grid .head, .grid .hour {
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid .hour { justify-content: flex-end; padding-right: 6px; white-space: nowrap; }
+.cell {
+  appearance: none;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.95rem;
+  min-height: 34px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+.cell.b0 { background: var(--h0); color: var(--t0); }
+.cell.b1 { background: var(--h1); color: var(--t1); }
+.cell.b2 { background: var(--h2); color: var(--t2); }
+.cell.b3 { background: var(--h3); color: var(--t3); }
+.cell.b4 { background: var(--h4); color: var(--t4); }
+.cell.b5 { background: var(--h5); color: var(--t5); }
+/* A thin cell keeps a hint of its color but fades toward the card, and its
+   number switches to the page ink so it stays fully readable. */
+.cell.thin {
+  color: var(--text);
+  border: 2px dashed var(--edge);
+}
+.cell.thin.b0 { background: color-mix(in srgb, var(--h0) 30%, var(--surface)); }
+.cell.thin.b1 { background: color-mix(in srgb, var(--h1) 30%, var(--surface)); }
+.cell.thin.b2 { background: color-mix(in srgb, var(--h2) 30%, var(--surface)); }
+.cell.thin.b3 { background: color-mix(in srgb, var(--h3) 30%, var(--surface)); }
+.cell.thin.b4 { background: color-mix(in srgb, var(--h4) 30%, var(--surface)); }
+.cell.thin.b5 { background: color-mix(in srgb, var(--h5) 30%, var(--surface)); }
+.cell.none { background: var(--empty); cursor: default; }
+.cell.selected { outline: 3px solid var(--focus); outline-offset: 1px; }
+
+.detail {
+  font-weight: 700;
+  min-height: 3em;
+  padding: 10px 12px;
+  border: 2px solid var(--edge);
+  border-radius: 6px;
+}
+
+.legend { margin-top: 12px; }
+.scale { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 3px; }
+.scale span {
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+}
+.keys { display: grid; gap: 8px; margin-top: 10px; font-size: 0.95rem; }
+.key { display: flex; gap: 10px; align-items: center; }
+.swatch { flex: 0 0 auto; width: 28px; height: 22px; border-radius: 4px; }
+.thin-swatch { background: color-mix(in srgb, var(--h3) 30%, var(--surface)); border: 2px dashed var(--edge); }
+.empty-swatch { background: var(--empty); }
+
+#coverage-body ul { margin: 0 0 12px; padding-left: 1.2em; }
+#coverage-body li { margin: 4px 0; }
