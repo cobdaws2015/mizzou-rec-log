@@ -30,6 +30,15 @@ DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 # what gets promoted into the summary so downstream files stay small.
 FEATURED = ["Strength Training", "Weight Room", "Jungle Annex", "Cardio Gallery"]
 
+# Below this many readings a weekday-by-hour median is mostly one afternoon's
+# luck. Three is the smallest n where the median ignores a single odd reading,
+# and it is the line the docs/ page fades cells at, so it lives here, once.
+MIN_N = 3
+
+# How many best and worst windows to name per room, and how long one may run.
+WINDOWS = 3
+WINDOW_MAX_HOURS = 3
+
 
 def read_rows() -> list[dict]:
     rows: list[dict] = []
@@ -222,6 +231,58 @@ def find_coverage(stamps: list[datetime], home_games: dict[str, str] | None = No
     }
 
 
+def find_windows(grid: dict[str, dict[str, dict]]) -> dict:
+    """The quietest and busiest stretches of a room, from trusted cells only.
+
+    A window is one to three consecutive hours on the same weekday where every
+    cell has at least MIN_N readings. Best windows are ranked by their busiest
+    hour (so "under X%" holds for the whole stretch) and worst by their quietest.
+    Picks never overlap, and two-hour stretches are preferred over single hours
+    because "go at 7" is less useful than "go between 6 and 8".
+    """
+    runs: list[tuple[int, int, list[dict]]] = []
+    for wd, day in enumerate(DAYS):
+        cells = grid.get(day, {})
+        for start in sorted(int(h) for h in cells):
+            span: list[dict] = []
+            for h in range(start, start + WINDOW_MAX_HOURS):
+                cell = cells.get(str(h))
+                if not cell or cell["n"] < MIN_N:
+                    break
+                span.append(cell)
+                runs.append((wd, start, list(span)))
+
+    def pick(score, taken: set[tuple[int, int]]) -> list[dict]:
+        chosen: list[dict] = []
+        # Longer first within an equal score, so a 3-hour stretch at 15% beats
+        # a 1-hour slice of it. Readings break the remaining ties.
+        for wd, start, span in sorted(
+            runs, key=lambda r: (score(r[2]), -len(r[2]), -sum(c["n"] for c in r[2]), r[0], r[1])
+        ):
+            hours = {(wd, start + i) for i in range(len(span))}
+            if hours & taken or (len(span) == 1 and any(len(r[2]) > 1 for r in runs)):
+                continue
+            taken |= hours
+            chosen.append({
+                "day": DAYS[wd],
+                "start": start,
+                "end": start + len(span),
+                "max_pct": max(c["pct"] for c in span),
+                "min_pct": min(c["pct"] for c in span),
+                "n": sum(c["n"] for c in span),
+            })
+            if len(chosen) == WINDOWS:
+                break
+        return chosen
+
+    # Worst picks skip any hour already named as best, so a room with only a
+    # handful of trusted cells never calls the same hour both quiet and busy.
+    taken: set[tuple[int, int]] = set()
+    best = pick(lambda span: max(c["pct"] for c in span), taken)
+    worst = pick(lambda span: -min(c["pct"] for c in span), taken)
+    return {"best": best, "worst": worst}
+
+
 def build(rows: list[dict], coverage: dict | None = None) -> dict:
     buckets: dict[str, dict[tuple[int, int], list[dict]]] = defaultdict(
         lambda: defaultdict(list)
@@ -247,11 +308,16 @@ def build(rows: list[dict], coverage: dict | None = None) -> dict:
                 "count": round(statistics.median(s["_count"] for s in samples)),
                 "n": len(samples),
             }
-        locations[loc] = {"capacity": capacity.get(loc, 0), "grid": cells}
+        locations[loc] = {
+            "capacity": capacity.get(loc, 0),
+            "grid": cells,
+            "windows": find_windows(cells),
+        }
 
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "samples": len(rows),
+        "min_samples": MIN_N,
         "days_observed": len(dates),
         "first_day": min(dates) if dates else None,
         "last_day": max(dates) if dates else None,
@@ -299,17 +365,16 @@ def print_grid(summary: dict, location: str) -> None:
     print("\n  blank <25%   - 25-45%   = 45-65%   # 65-85%   @ 85%+   . no data")
 
     # The actual answer to "when should I go", rather than a picture of it.
-    flat = [
-        (cell["pct"], d, h)
-        for d, day in grid.items()
-        for h, cell in day.items()
-        if 5 <= int(h) <= 22 and cell["n"] >= 2
-    ]
-    if flat:
-        print("\n  quietest windows:")
-        for pct, d, h in sorted(flat)[:5]:
-            h12 = int(h) % 12 or 12
-            print(f"    {d} {h12}{'am' if int(h) < 12 else 'pm'}  {pct}% full")
+    def label(h: int) -> str:
+        return f"{h % 12 or 12}{'am' if h % 24 < 12 else 'pm'}"
+
+    for title, key, word in (("quietest", "best", "max_pct"), ("busiest", "worst", "min_pct")):
+        found = loc.get("windows", {}).get(key)
+        if found:
+            print(f"\n  {title} windows (cells with n >= {MIN_N}):")
+            for w in found:
+                print(f"    {w['day']} {label(w['start'])}-{label(w['end'])}"
+                      f"  {'at most' if key == 'best' else 'at least'} {w[word]}% full  (n={w['n']})")
 
 
 def main() -> None:

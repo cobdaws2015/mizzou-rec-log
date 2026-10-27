@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>MizzouRec Busy Hours</title>
+<meta name="description" content="When each MizzouRec room is usually quiet or busy, by weekday and hour, from the Rec's own published headcounts.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>When is the Rec quiet?</h1>
+    <p class="lede">Typical headcount at MizzouRec by weekday and hour, built from the counts the Rec posts on its Facility Usage page.</p>
+  </header>
+
+  <section class="picker" aria-label="Room">
+    <label for="room">Room</label>
+    <select id="room"></select>
+  </section>
+
+  <p id="status" class="status" role="status">Loading data...</p>
+
+  <section id="windows" class="windows" hidden>
+    <div class="card">
+      <h2>Best times</h2>
+      <ul id="best"></ul>
+    </div>
+    <div class="card">
+      <h2>Worst times</h2>
+      <ul id="worst"></ul>
+    </div>
+  </section>
+
+  <section id="heat" class="card" hidden>
+    <h2 id="heat-title">Week by hour</h2>
+    <p class="note">Each number is the usual (median) percent full for that hour. Tap or hover a cell to see how many readings it rests on.</p>
+    <div id="grid" class="grid" role="grid" aria-labelledby="heat-title"></div>
+    <p id="detail" class="detail" aria-live="polite">Tap a cell for details.</p>
+    <div class="legend" aria-label="Legend">
+      <div class="scale" id="scale"></div>
+      <div class="keys">
+        <span class="key"><span class="swatch thin-swatch"></span><span id="thin-label">Fewer than 3 readings: washed out with a dashed edge, do not trust it yet</span></span>
+        <span class="key"><span class="swatch empty-swatch"></span>No readings at this hour</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="coverage" class="card" hidden>
+    <h2>About the data</h2>
+    <div id="coverage-body"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
