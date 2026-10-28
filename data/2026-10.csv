@@ -1708,3 +1708,11 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-10-28T11:21:58.313,2,11,21,9720,South Courts,Facility Operations,0,40,0.0,False,2026-10-28T16:50:35+00:00
 2026-10-28T11:21:59.063,2,11,21,9722,North Courts,Facility Operations,2,40,5.0,False,2026-10-28T16:50:35+00:00
 2026-10-28T11:21:59.72,2,11,21,9717,Weight Room,Facility Operations,20,55,36.4,False,2026-10-28T16:50:35+00:00
+2026-10-28T12:19:17.56,2,12,19,10220,Brewer Courts,Facility Operations,15,50,30.0,False,2026-10-28T17:21:19+00:00
+2026-10-28T12:19:18.17,2,12,19,9720,South Courts,Facility Operations,0,40,0.0,False,2026-10-28T17:21:19+00:00
+2026-10-28T12:19:19.31,2,12,19,9722,North Courts,Facility Operations,1,40,2.5,False,2026-10-28T17:21:19+00:00
+2026-10-28T12:19:20.187,2,12,19,9717,Weight Room,Facility Operations,25,55,45.5,False,2026-10-28T17:21:19+00:00
+2026-10-28T12:19:21.497,2,12,19,9718,Climbing Wall,Facility Operations,0,8,0.0,False,2026-10-28T17:21:19+00:00
+2026-10-28T12:19:22.293,2,12,19,9728,Boxing Gym,Facility Operations,1,16,6.2,False,2026-10-28T17:21:19+00:00
+2026-10-28T12:19:22.92,2,12,19,9727,Functional Fitness,Facility Operations,1,10,10.0,False,2026-10-28T17:21:19+00:00
+2026-10-28T12:19:23.623,2,12,19,9731,Outdoor Fitness,Facility Operations,14,45,31.1,False,2026-10-28T17:21:19+00:00
