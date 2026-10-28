@@ -1728,3 +1728,7 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-10-28T14:00:14.29,2,14,0,9728,Boxing Gym,Facility Operations,0,16,0.0,False,2026-10-28T19:03:10+00:00
 2026-10-28T14:00:14.993,2,14,0,9727,Functional Fitness,Facility Operations,3,10,30.0,False,2026-10-28T19:03:10+00:00
 2026-10-28T14:00:15.697,2,14,0,9731,Outdoor Fitness,Facility Operations,8,45,17.8,False,2026-10-28T19:03:10+00:00
+2026-10-28T14:05:56.26,2,14,5,9712,Cardio Gallery,Facility Operations,18,89,20.2,False,2026-10-28T19:13:16+00:00
+2026-10-28T14:05:57.043,2,14,5,10596,Strength Training,Facility Operations,42,90,46.7,False,2026-10-28T19:13:16+00:00
+2026-10-28T14:05:57.683,2,14,5,11558,Jungle Annex,Facility Operations,13,36,36.1,False,2026-10-28T19:13:16+00:00
+2026-10-28T14:05:58.557,2,14,5,9721,Indoor Track,Facility Operations,17,50,34.0,False,2026-10-28T19:13:16+00:00
