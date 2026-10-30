@@ -1866,3 +1866,7 @@ published_at,weekday,hour,minute,location_id,location,facility,count,capacity,pc
 2026-10-30T12:57:47.043,4,12,57,10596,Strength Training,Facility Operations,25,90,27.8,False,2026-10-30T18:00:16+00:00
 2026-10-30T12:57:47.7,4,12,57,11558,Jungle Annex,Facility Operations,9,36,25.0,False,2026-10-30T18:00:16+00:00
 2026-10-30T12:57:48.51,4,12,57,9721,Indoor Track,Facility Operations,5,50,10.0,False,2026-10-30T18:00:16+00:00
+2026-10-30T14:01:15.337,4,14,1,9712,Cardio Gallery,Facility Operations,13,89,14.6,False,2026-10-30T19:09:39+00:00
+2026-10-30T14:01:16.183,4,14,1,10596,Strength Training,Facility Operations,45,90,50.0,False,2026-10-30T19:09:39+00:00
+2026-10-30T14:01:16.827,4,14,1,11558,Jungle Annex,Facility Operations,16,36,44.4,False,2026-10-30T19:09:39+00:00
+2026-10-30T14:01:17.493,4,14,1,9721,Indoor Track,Facility Operations,9,50,18.0,False,2026-10-30T19:09:39+00:00
