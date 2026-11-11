@@ -1,7 +1,7 @@
 {
  "coverage": {
-  "days_observed": 61,
-  "days_spanned": 65,
+  "days_observed": 62,
+  "days_spanned": 66,
   "explained_days": {
    "2026-09-19": "home game vs Troy",
    "2026-10-03": "home game vs Florida",
@@ -65,7 +65,7 @@
   "unexplained_days": [],
   "window_starts": "2026-09-07"
  },
- "days_observed": 61,
+ "days_observed": 62,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -73,8 +73,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-11-11T03:10:19+00:00",
- "last_day": "2026-11-10",
+ "generated_at": "2026-11-11T15:32:18+00:00",
+ "last_day": "2026-11-11",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -664,9 +664,9 @@
       "pct": 6
      },
      "9": {
-      "count": 1,
-      "n": 5,
-      "pct": 6
+      "count": 0,
+      "n": 6,
+      "pct": 3
      }
     }
    },
@@ -1168,8 +1168,8 @@
      },
      "9": {
       "count": 2,
-      "n": 4,
-      "pct": 3
+      "n": 5,
+      "pct": 4
      }
     }
    },
@@ -1186,9 +1186,9 @@
      {
       "day": "Wed",
       "end": 11,
-      "max_pct": 3,
+      "max_pct": 4,
       "min_pct": 3,
-      "n": 8,
+      "n": 9,
       "start": 9
      },
      {
@@ -1740,9 +1740,9 @@
       "pct": 16
      },
      "9": {
-      "count": 15,
-      "n": 2,
-      "pct": 17
+      "count": 14,
+      "n": 3,
+      "pct": 16
      }
     }
    },
@@ -1750,10 +1750,18 @@
     "best": [
      {
       "day": "Wed",
-      "end": 9,
+      "end": 10,
+      "max_pct": 16,
+      "min_pct": 16,
+      "n": 7,
+      "start": 8
+     },
+     {
+      "day": "Wed",
+      "end": 8,
       "max_pct": 18,
       "min_pct": 8,
-      "n": 14,
+      "n": 10,
       "start": 6
      },
      {
@@ -1763,14 +1771,6 @@
       "min_pct": 14,
       "n": 9,
       "start": 14
-     },
-     {
-      "day": "Fri",
-      "end": 11,
-      "max_pct": 19,
-      "min_pct": 15,
-      "n": 8,
-      "start": 9
      }
     ],
     "worst": [
@@ -2264,7 +2264,7 @@
      },
      "9": {
       "count": 0,
-      "n": 5,
+      "n": 6,
       "pct": 0
      }
     }
@@ -2284,7 +2284,7 @@
       "end": 11,
       "max_pct": 0,
       "min_pct": 0,
-      "n": 12,
+      "n": 13,
       "start": 9
      },
      {
@@ -2889,7 +2889,7 @@
      },
      "9": {
       "count": 1,
-      "n": 5,
+      "n": 6,
       "pct": 10
      }
     }
@@ -2909,7 +2909,7 @@
       "end": 11,
       "max_pct": 10,
       "min_pct": 0,
-      "n": 12,
+      "n": 13,
       "start": 9
      },
      {
@@ -3456,14 +3456,22 @@
       "pct": 14
      },
      "9": {
-      "count": 11,
-      "n": 2,
-      "pct": 22
+      "count": 7,
+      "n": 3,
+      "pct": 14
      }
     }
    },
    "windows": {
     "best": [
+     {
+      "day": "Wed",
+      "end": 10,
+      "max_pct": 14,
+      "min_pct": 14,
+      "n": 7,
+      "start": 8
+     },
      {
       "day": "Fri",
       "end": 13,
@@ -3474,19 +3482,11 @@
      },
      {
       "day": "Wed",
-      "end": 9,
+      "end": 8,
       "max_pct": 17,
       "min_pct": 5,
-      "n": 14,
-      "start": 6
-     },
-     {
-      "day": "Thu",
-      "end": 11,
-      "max_pct": 20,
-      "min_pct": 16,
       "n": 10,
-      "start": 8
+      "start": 6
      }
     ],
     "worst": [
@@ -4029,14 +4029,22 @@
       "pct": 22
      },
      "9": {
-      "count": 11,
-      "n": 2,
-      "pct": 31
+      "count": 8,
+      "n": 3,
+      "pct": 22
      }
     }
    },
    "windows": {
     "best": [
+     {
+      "day": "Wed",
+      "end": 10,
+      "max_pct": 22,
+      "min_pct": 22,
+      "n": 7,
+      "start": 8
+     },
      {
       "day": "Fri",
       "end": 13,
@@ -4052,14 +4060,6 @@
       "min_pct": 19,
       "n": 7,
       "start": 9
-     },
-     {
-      "day": "Wed",
-      "end": 9,
-      "max_pct": 28,
-      "min_pct": 17,
-      "n": 13,
-      "start": 6
      }
     ],
     "worst": [
@@ -4553,7 +4553,7 @@
      },
      "9": {
       "count": 0,
-      "n": 4,
+      "n": 5,
       "pct": 0
      }
     }
@@ -4581,7 +4581,7 @@
       "end": 11,
       "max_pct": 0,
       "min_pct": 0,
-      "n": 9,
+      "n": 10,
       "start": 9
      }
     ],
@@ -5045,9 +5045,9 @@
       "pct": 0
      },
      "9": {
-      "count": 0,
-      "n": 5,
-      "pct": 0
+      "count": 2,
+      "n": 6,
+      "pct": 3
      }
     }
    },
@@ -5564,7 +5564,7 @@
      },
      "9": {
       "count": 0,
-      "n": 5,
+      "n": 6,
       "pct": 0
      }
     }
@@ -5588,12 +5588,12 @@
       "start": 9
      },
      {
-      "day": "Tue",
-      "end": 12,
+      "day": "Wed",
+      "end": 11,
       "max_pct": 0,
       "min_pct": 0,
-      "n": 11,
-      "start": 10
+      "n": 12,
+      "start": 9
      }
     ],
     "worst": [
@@ -6136,9 +6136,9 @@
       "pct": 28
      },
      "9": {
-      "count": 27,
-      "n": 2,
-      "pct": 30
+      "count": 26,
+      "n": 3,
+      "pct": 29
      }
     }
    },
@@ -6154,19 +6154,19 @@
      },
      {
       "day": "Wed",
-      "end": 9,
-      "max_pct": 31,
-      "min_pct": 16,
-      "n": 14,
-      "start": 6
-     },
-     {
-      "day": "Thu",
       "end": 10,
-      "max_pct": 31,
-      "min_pct": 23,
+      "max_pct": 29,
+      "min_pct": 28,
       "n": 7,
       "start": 8
+     },
+     {
+      "day": "Wed",
+      "end": 8,
+      "max_pct": 31,
+      "min_pct": 16,
+      "n": 10,
+      "start": 6
      }
     ],
     "worst": [
@@ -6689,9 +6689,9 @@
       "pct": 25
      },
      "9": {
-      "count": 15,
-      "n": 5,
-      "pct": 27
+      "count": 13,
+      "n": 6,
+      "pct": 24
      }
     }
    },
@@ -6782,7 +6782,7 @@
     },
     "Wed": {
      "factor": 1.0,
-     "n": 67
+     "n": 68
     }
    },
    "weekday_hours": {
@@ -6855,8 +6855,8 @@
      "pct": 15
     },
     "9": {
-     "n": 18,
-     "pct": 20
+     "n": 19,
+     "pct": 19
     }
    },
    "weekend_hours": {
@@ -6938,8 +6938,8 @@
      "n": 58
     },
     "Wed": {
-     "factor": 1.04,
-     "n": 66
+     "factor": 1.0,
+     "n": 67
     }
    },
    "weekday_hours": {
@@ -7012,8 +7012,8 @@
      "pct": 25
     },
     "9": {
-     "n": 18,
-     "pct": 26
+     "n": 19,
+     "pct": 25
     }
    },
    "weekend_hours": {
@@ -7096,7 +7096,7 @@
     },
     "Wed": {
      "factor": 1.11,
-     "n": 67
+     "n": 68
     }
    },
    "weekday_hours": {
@@ -7169,8 +7169,8 @@
      "pct": 24
     },
     "9": {
-     "n": 18,
-     "pct": 31
+     "n": 19,
+     "pct": 30
     }
    },
    "weekend_hours": {
@@ -7253,7 +7253,7 @@
     },
     "Wed": {
      "factor": 1.05,
-     "n": 56
+     "n": 57
     }
    },
    "weekday_hours": {
@@ -7326,8 +7326,8 @@
      "pct": 24
     },
     "9": {
-     "n": 17,
-     "pct": 27
+     "n": 18,
+     "pct": 24
     }
    },
    "weekend_hours": {
@@ -7374,5 +7374,5 @@
    }
   }
  },
- "samples": 3342
+ "samples": 3354
 }
