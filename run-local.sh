@@ -18,11 +18,12 @@ set -uo pipefail
 # launchd hands a job almost no PATH, so spell it out (same as daily-refresh.sh).
 export PATH="/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-REPO="/Users/cobymaybrook/Claude Projects/mizzou-rec-log"
+# The repo is wherever this script lives, so nothing here names one machine.
+REPO="$(cd "$(dirname "$0")" && pwd)"
 # System python3 is 3.9 against LibreSSL 2.8.3 and the Rec's endpoint refuses
-# its TLS handshake. 3.11 is built against OpenSSL 3.
-PY="/Users/cobymaybrook/.local/bin/python3.11"
-LOG="/Users/cobymaybrook/Library/Logs/mizzou-rec-collect.log"
+# its TLS handshake. 3.11 is built against OpenSSL 3. Override with PY=...
+PY="${PY:-$HOME/.local/bin/python3.11}"
+LOG="$HOME/Library/Logs/mizzou-rec-collect.log"
 
 log() { echo "$(date '+%Y-%m-%d %H:%M:%S') $*" >> "$LOG"; }
 

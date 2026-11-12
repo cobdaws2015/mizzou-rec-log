@@ -6,8 +6,9 @@
        Backstop for .github/workflows/collect.yml, which has never fired on its
        own schedule. See run-local.sh for the full note.
 
-       Install:
-         cp com.mizzourec.collect.plist ~/Library/LaunchAgents/
+       launchd does not expand variables, so __REPO__ and __HOME__ are filled in
+       at install time. Install, from the repo folder:
+         sed -e "s|__REPO__|$PWD|g" -e "s|__HOME__|$HOME|g" com.mizzourec.collect.plist > ~/Library/LaunchAgents/com.mizzourec.collect.plist
          launchctl bootstrap gui/$UID ~/Library/LaunchAgents/com.mizzourec.collect.plist
 
        Run it right now without waiting:
@@ -25,7 +26,7 @@
   <key>ProgramArguments</key>
   <array>
     <string>/bin/bash</string>
-    <string>/Users/cobymaybrook/Claude Projects/mizzou-rec-log/run-local.sh</string>
+    <string>__REPO__/run-local.sh</string>
   </array>
 
   <key>StartInterval</key>
@@ -39,12 +40,12 @@
 
   <!-- run-local.sh keeps its own log; these catch anything that dies before it. -->
   <key>StandardOutPath</key>
-  <string>/Users/cobymaybrook/Library/Logs/mizzou-rec-collect.launchd.log</string>
+  <string>__HOME__/Library/Logs/mizzou-rec-collect.launchd.log</string>
   <key>StandardErrorPath</key>
-  <string>/Users/cobymaybrook/Library/Logs/mizzou-rec-collect.launchd.log</string>
+  <string>__HOME__/Library/Logs/mizzou-rec-collect.launchd.log</string>
 
   <key>WorkingDirectory</key>
-  <string>/Users/cobymaybrook/Claude Projects/mizzou-rec-log</string>
+  <string>__REPO__</string>
 
   <key>ProcessType</key>
   <string>Background</string>
