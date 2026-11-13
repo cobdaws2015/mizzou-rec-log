@@ -73,7 +73,7 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-11-13T14:04:18+00:00",
+ "generated_at": "2026-11-13T14:29:30+00:00",
  "last_day": "2026-11-13",
  "locations": {
   "50m Pool": {
@@ -243,7 +243,7 @@
      },
      "8": {
       "count": 0,
-      "n": 4,
+      "n": 5,
       "pct": 0
      },
      "9": {
@@ -674,19 +674,19 @@
     "best": [
      {
       "day": "Fri",
+      "end": 10,
+      "max_pct": 0,
+      "min_pct": 0,
+      "n": 8,
+      "start": 8
+     },
+     {
+      "day": "Fri",
       "end": 13,
       "max_pct": 0,
       "min_pct": 0,
       "n": 8,
       "start": 11
-     },
-     {
-      "day": "Fri",
-      "end": 10,
-      "max_pct": 0,
-      "min_pct": 0,
-      "n": 7,
-      "start": 8
      },
      {
       "day": "Wed",
@@ -785,9 +785,9 @@
       "pct": 0
      },
      "8": {
-      "count": 2,
-      "n": 2,
-      "pct": 4
+      "count": 1,
+      "n": 3,
+      "pct": 2
      },
      "9": {
       "count": 1,
@@ -1197,12 +1197,12 @@
       "start": 9
      },
      {
-      "day": "Wed",
-      "end": 11,
-      "max_pct": 4,
-      "min_pct": 3,
-      "n": 11,
-      "start": 9
+      "day": "Fri",
+      "end": 10,
+      "max_pct": 2,
+      "min_pct": 2,
+      "n": 6,
+      "start": 8
      }
     ],
     "worst": [
@@ -1872,7 +1872,7 @@
      },
      "8": {
       "count": 0,
-      "n": 4,
+      "n": 5,
       "pct": 0
      },
      "9": {
@@ -2481,9 +2481,9 @@
       "pct": 0
      },
      "8": {
-      "count": 2,
-      "n": 4,
-      "pct": 15
+      "count": 1,
+      "n": 5,
+      "pct": 10
      },
      "9": {
       "count": 0,
@@ -2928,12 +2928,12 @@
       "start": 9
      },
      {
-      "day": "Mon",
-      "end": 18,
-      "max_pct": 15,
-      "min_pct": 10,
-      "n": 9,
-      "start": 16
+      "day": "Fri",
+      "end": 10,
+      "max_pct": 10,
+      "min_pct": 0,
+      "n": 8,
+      "start": 8
      }
     ],
     "worst": [
@@ -4171,7 +4171,7 @@
      },
      "8": {
       "count": 0,
-      "n": 3,
+      "n": 4,
       "pct": 0
      },
      "9": {
@@ -4683,9 +4683,9 @@
       "pct": 0
      },
      "8": {
-      "count": 1,
-      "n": 2,
-      "pct": 2
+      "count": 0,
+      "n": 3,
+      "pct": 0
      },
      "9": {
       "count": 3,
@@ -5087,20 +5087,20 @@
       "start": 8
      },
      {
+      "day": "Fri",
+      "end": 10,
+      "max_pct": 7,
+      "min_pct": 0,
+      "n": 6,
+      "start": 8
+     },
+     {
       "day": "Thu",
       "end": 9,
       "max_pct": 9,
       "min_pct": 0,
       "n": 7,
       "start": 7
-     },
-     {
-      "day": "Fri",
-      "end": 13,
-      "max_pct": 9,
-      "min_pct": 9,
-      "n": 7,
-      "start": 11
      }
     ],
     "worst": [
@@ -5197,7 +5197,7 @@
      },
      "8": {
       "count": 0,
-      "n": 3,
+      "n": 4,
       "pct": 0
      },
      "9": {
@@ -6292,9 +6292,9 @@
       "pct": 14
      },
      "8": {
-      "count": 8,
-      "n": 4,
-      "pct": 15
+      "count": 9,
+      "n": 5,
+      "pct": 16
      },
      "9": {
       "count": 10,
@@ -6731,8 +6731,8 @@
       "day": "Fri",
       "end": 10,
       "max_pct": 18,
-      "min_pct": 15,
-      "n": 7,
+      "min_pct": 16,
+      "n": 8,
       "start": 8
      },
      {
@@ -7258,8 +7258,8 @@
    "capacity": 55,
    "day_factor": {
     "Fri": {
-     "factor": 0.8,
-     "n": 37
+     "factor": 0.82,
+     "n": 38
     },
     "Mon": {
      "factor": 1.25,
@@ -7352,8 +7352,8 @@
      "pct": 15
     },
     "8": {
-     "n": 13,
-     "pct": 24
+     "n": 14,
+     "pct": 25
     },
     "9": {
      "n": 21,
@@ -7404,5 +7404,5 @@
    }
   }
  },
- "samples": 3478
+ "samples": 3486
 }
