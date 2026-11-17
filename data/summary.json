@@ -1,7 +1,7 @@
 {
  "coverage": {
-  "days_observed": 67,
-  "days_spanned": 71,
+  "days_observed": 68,
+  "days_spanned": 72,
   "explained_days": {
    "2026-09-19": "home game vs Troy",
    "2026-10-03": "home game vs Florida",
@@ -65,7 +65,7 @@
   "unexplained_days": [],
   "window_starts": "2026-09-07"
  },
- "days_observed": 67,
+ "days_observed": 68,
  "featured": [
   "Strength Training",
   "Weight Room",
@@ -73,8 +73,8 @@
   "Cardio Gallery"
  ],
  "first_day": "2026-09-07",
- "generated_at": "2026-11-16T23:24:17+00:00",
- "last_day": "2026-11-16",
+ "generated_at": "2026-11-17T14:55:22+00:00",
+ "last_day": "2026-11-17",
  "locations": {
   "50m Pool": {
    "capacity": 45,
@@ -582,9 +582,9 @@
       "pct": 6
      },
      "7": {
-      "count": 1,
-      "n": 1,
-      "pct": 6
+      "count": 0,
+      "n": 2,
+      "pct": 3
      },
      "8": {
       "count": 0,
@@ -1106,7 +1106,7 @@
      },
      "7": {
       "count": 0,
-      "n": 2,
+      "n": 3,
       "pct": 0
      },
      "8": {
@@ -2222,7 +2222,7 @@
      },
      "7": {
       "count": 0,
-      "n": 1,
+      "n": 2,
       "pct": 0
      },
      "8": {
@@ -2864,8 +2864,8 @@
      },
      "7": {
       "count": 0,
-      "n": 1,
-      "pct": 0
+      "n": 2,
+      "pct": 5
      },
      "8": {
       "count": 1,
@@ -4553,7 +4553,7 @@
      },
      "7": {
       "count": 0,
-      "n": 2,
+      "n": 3,
       "pct": 0
      },
      "8": {
@@ -5066,7 +5066,7 @@
      },
      "7": {
       "count": 0,
-      "n": 1,
+      "n": 2,
       "pct": 0
      },
      "8": {
@@ -5589,7 +5589,7 @@
      },
      "7": {
       "count": 0,
-      "n": 2,
+      "n": 3,
       "pct": 0
      },
      "8": {
@@ -6729,9 +6729,9 @@
       "pct": 7
      },
      "7": {
-      "count": 8,
-      "n": 1,
-      "pct": 14
+      "count": 11,
+      "n": 2,
+      "pct": 20
      },
      "8": {
       "count": 14,
@@ -7386,7 +7386,7 @@
     },
     "Tue": {
      "factor": 1.15,
-     "n": 49
+     "n": 50
     },
     "Wed": {
      "factor": 1.05,
@@ -7455,8 +7455,8 @@
      "pct": 14
     },
     "7": {
-     "n": 10,
-     "pct": 15
+     "n": 11,
+     "pct": 16
     },
     "8": {
      "n": 14,
@@ -7511,5 +7511,5 @@
    }
   }
  },
- "samples": 3590
+ "samples": 3598
 }
