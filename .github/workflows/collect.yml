@@ -27,21 +27,11 @@ jobs:
         id: sample
         run: python3 collect.py
 
-      - name: Rebuild summary
-        if: steps.sample.outputs.changed == 'true'
-        run: python3 summarize.py
-
-      - name: Commit
+      - name: Commit and push
         if: steps.sample.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --quiet --cached && exit 0
-          git commit -m "data: $(date -u '+%Y-%m-%dT%H:%MZ')"
-          # Another queued run may have landed between checkout and push.
-          for i in 1 2 3; do
-            git push && exit 0
-            git pull --rebase --autostash || true
-          done
-          exit 1
+          # sync.sh merges rows itself and rebuilds the summary, so a run that
+          # races the Mac can never stop on a git conflict.
+          bash sync.sh "data: $(date -u '+%Y-%m-%dT%H:%MZ')"

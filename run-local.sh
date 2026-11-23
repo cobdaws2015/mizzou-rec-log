@@ -30,29 +30,24 @@ log() { echo "$(date '+%Y-%m-%d %H:%M:%S') $*" >> "$LOG"; }
 cd "$REPO" || { log "FAILED: no repo at $REPO"; exit 1; }
 [ -x "$PY" ] || { log "FAILED: no python at $PY"; exit 1; }
 
-# Take whatever the Actions run (or another machine) may have landed first, so
-# the push at the end is a fast-forward.
-git pull --rebase --autostash --quiet || log "WARN: pull failed, continuing"
+# Pick up code and data the Actions run landed. Fast-forward only: if both sides
+# have new commits, collect anyway and let sync.sh reconcile them at the end.
+git fetch --quiet origin main && git merge --ff-only --quiet origin/main 2>/dev/null \
+  || log "WARN: could not fast-forward, sync.sh will reconcile"
 
 "$PY" collect.py >> "$LOG" 2>&1
 
 # Ask git what actually changed rather than trusting the script's own report.
-if [ -z "$(git status --porcelain data/)" ]; then
+# Also go ahead if an earlier tick committed rows it could not push.
+if [ -z "$(git status --porcelain data/)" ] && [ -z "$(git log --oneline origin/main..HEAD)" ]; then
   exit 0
 fi
 
-"$PY" summarize.py >> "$LOG" 2>&1
-
-git add data/
-git commit -q -m "data: $(date -u '+%Y-%m-%dT%H:%MZ') (mac)"
-
-for _ in 1 2 3; do
-  if git push --quiet 2>>"$LOG"; then
-    log "pushed"
-    exit 0
-  fi
-  git pull --rebase --autostash --quiet || true
-done
-
-log "FAILED: push rejected three times, commit is local only"
+# sync.sh copies data/ aside, lines up with GitHub, folds the rows back in and
+# pushes, so a clash with the Actions run can no longer freeze this repo.
+if PY="$PY" "$REPO/sync.sh" "data: $(date -u '+%Y-%m-%dT%H:%MZ') (mac)" >> "$LOG" 2>&1; then
+  log "pushed"
+  exit 0
+fi
+log "FAILED: sync did not push, rows are kept and retried next tick"
 exit 1
